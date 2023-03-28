@@ -1,0 +1,83 @@
+  @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600&family=Josefin+Sans:wght@400;700&display=swap');
+
+body 
+
+{
+    background-color: antiquewhite;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#main 
+{
+    font-size: 24px;
+}
+
+h1 
+
+{
+    font-size: 64px;
+    color: purple;
+    text-shadow: rgb(6, 236, 232) 1px 0 20px;
+}
+
+#mail 
+
+{
+    font-size: 16px;
+}
+
+h3 
+
+{
+    font-size: 24px;
+    color: purple;
+    padding-top: 24px;
+}
+
+ul 
+
+{
+    list-style:circle;
+}
+
+ol 
+
+{
+    list-style: lower-alpha;
+}
+
+li 
+
+{
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.gitlogo 
+
+{
+    width: 30px;
+}
+
+#cringe 
+
+{
+    font-family: 'Alkatra', cursive;
+}
+
+abbr 
+{
+    text-decoration: none;
+}
+
+table, th, td 
+
+{
+    border: 2px solid purple;
+}
+
+footer 
+{
+    font-size: 12px;
+    padding-top: 50px;
+}
