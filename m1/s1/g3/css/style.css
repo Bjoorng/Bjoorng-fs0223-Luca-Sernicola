@@ -5,17 +5,6 @@ body
     font-family: 'Alkatra', cursive;   
 }
 
-#head
-{
-    text-align: center;
-}
-
-#mainboy
-{
-    margin: 0 auto;
-    width: 720px;
-}
-
 h2
 {
     padding-bottom: 20px;
@@ -27,6 +16,18 @@ footer
     margin: 0 auto;
     width: 720px;
 }
+
+#head
+{
+    text-align: center;
+}
+
+#mainboy
+{
+    margin: 0 auto;
+    width: 720px;
+}
+
 
 #logo
 {
