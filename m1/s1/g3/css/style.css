@@ -2,8 +2,7 @@
 
 body
 {
-    font-family: 'Alkatra', cursive;
-    
+    font-family: 'Alkatra', cursive;   
 }
 
 header
@@ -47,8 +46,13 @@ main
 #kvara
 {
     color: red;
-    height: 20px;
-    padding-left: 20px solid #fee8af;
+    border-left: 2px solid #fee8af; 
+    padding-left: 15px;
+}
+
+#sauce
+{
+    display: block;
 }
 
 h2
