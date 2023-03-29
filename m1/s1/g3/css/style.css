@@ -1,0 +1,45 @@
+
+
+header
+{
+    text-align: center;
+}
+
+main
+{
+    margin: 0 auto;
+    width: 720px;
+}
+
+#osimhen 
+{
+    border-top: 2px solid #fee8af;
+    background-color: #fdfbf1;
+    padding: 15px;
+}
+
+#ricardo 
+{
+    width: 720px;
+    height: 480px;
+}
+
+#kvara
+{
+    color: red;
+    height: 20px;
+    padding-left: 20px solid #fee8af;
+}
+
+
+h2
+{
+    padding-bottom: 20px;
+    border-bottom: solid #eefbfb;
+}
+
+footer
+{
+    margin: 0 auto;
+    width: 720px;
+}
