@@ -17,6 +17,12 @@ main
     width: 720px;
 }
 
+#title
+{
+    text-align: center;
+    font-size: 2.75em;
+}
+
 #osimhen 
 {
     border-top: 2px solid #fee8af;
@@ -24,10 +30,18 @@ main
     padding: 15px;
 }
 
-#ricardo 
+#meow
 {
+    border-radius: 10px;
     width: 720px;
     height: 480px;
+}
+
+#greytext
+{
+    color: #b9b9b9;
+    text-align: center;
+    margin-top: 0px;
 }
 
 #kvara
