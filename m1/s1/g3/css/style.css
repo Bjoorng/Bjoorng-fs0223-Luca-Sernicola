@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
 
+body
+{
+    font-family: 'Alkatra', cursive;
+    
+}
 
 header
 {
@@ -30,7 +36,6 @@ main
     height: 20px;
     padding-left: 20px solid #fee8af;
 }
-
 
 h2
 {
