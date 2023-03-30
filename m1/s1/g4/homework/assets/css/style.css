@@ -1,15 +1,160 @@
 /* IMPOSTAZIONI GENERALI */
+body
+{
+    background-image: url(../img/sfondo.png);
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /* HEADER */
 
+
+#headboi
+{
+    text-align: center;
+    background-image: linear-gradient(45deg, #0a7188, #00a4c0);
+    color: white;
+    margin: 20px;
+    box-shadow: 1px 1px 8px 1px rgb(83, 83, 83);
+}
+
+#menuboi li::before 
+{
+    content: "\21D0";
+}
+
+#menuboi li::after
+{
+    content: "\21D2";
+}
+
+.link
+{
+    color: white;
+    text-decoration: none;
+}
+
+
 /* MAIN */
+
+
+#mainboi
+{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 8px 1px rgb(47, 47, 47);
+}
+
+#logoboi
+{
+    padding: 20px;
+    width: 200px
+}
+
+#titleboi
+{
+    padding: 20px;
+}
+
+#authorboi
+{
+    padding: 20px;
+}
+
+.spanboi
+{
+    background-color: #e7e4e6;
+    border: 1px solid #a2a3a2;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.listboi
+{
+    margin: 20px;
+}
+
+.list
+{
+    align-items: center;
+}
+
+.p-boi
+{
+    padding: 20px;
+}
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
+.art
+{
+    margin: 10px;
+    background-color: #e2e6e8;
+}
+
 /* TABELLE */
 
+#tab-boi
+{
+    margin: auto;
+    border-bottom:1px solid #3366cc;
+}
+
+thead
+{
+    text-align: center;
+}
+
+tr:nth-child(odd) 
+{
+    border-top: 1px solid #e7e7e8;
+    border-bottom: 1px solid #e7e7e8;
+    background-color: #e2e6e8;
+}
+
+tr:nth-child(1) 
+{
+    border-top: 1px solid #e7e7e8;
+    border-bottom: 1px solid #e7e7e8;
+    background-color: #3366cc;
+}
+
 /* FORM */
+
+#formboi
+{
+    background-color: #e2e6e8;
+    text-align: center;
+    margin: 20px;
+}
+
+#formtitle
+{
+    font-weight: bold;
+}
+
+.email
+{
+    border: 0px;
+    border-bottom: 1px dotted black;
+}
 
 /* ELEMENTI NELL' ASIDE */
 
 /* FOOTER */
+
+#footboi
+{
+    text-align: center;
+    color: white;
+    background-color: #00a4c0;
+    margin: 20px;
+    background-image: linear-gradient( #005566, #373836);
+    box-shadow: 1px 1px 8px 1px rgb(47, 47, 47);
+}
+#foot-title
+{
+    padding: 20px;
+}
