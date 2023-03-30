@@ -68,7 +68,7 @@ body
     background-color: #e7e4e6;
     border: 1px solid #a2a3a2;
     border-radius: 5px;
-    padding: 1px;
+    padding: 0.8px;
 }
 
 .listboi
@@ -78,6 +78,7 @@ body
 
 .list
 {
+    line-height: 1.3em;
     align-items: center;
 }
 
@@ -86,6 +87,10 @@ body
     padding: 20px;
 }
 
+.video
+{
+    border-radius: 30px;
+}
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 .art
