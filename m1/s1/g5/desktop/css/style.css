@@ -95,6 +95,11 @@ body
 
 /* Side */
 
+a
+{
+    text-decoration: none;
+}
+
 #sideboi
 {
     text-align: center;
