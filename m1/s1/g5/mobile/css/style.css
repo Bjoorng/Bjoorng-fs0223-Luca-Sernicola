@@ -1,0 +1,182 @@
+/* Your styles here */
+
+*
+{
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body
+{
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+/* Header */
+
+#headboi
+{
+    background-color: black;
+    padding: 30px 10px 15px 10px;
+    width: 100%;
+}
+
+#logoboi
+{
+    padding-bottom: 1em;
+    width: 165px
+}
+
+/* Main */
+
+#msecboi
+{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    padding: 2em;
+}
+
+h1
+{
+    font-size: 2.3em;
+}
+
+.divide
+{
+    padding-bottom: 2em;
+}
+
+.sadp
+{
+    padding-bottom: 2em;
+}
+
+#goboi
+{
+    background-color: #f04c2f;
+    color: #c8e7f0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 5px;
+}
+
+.secboi
+{
+    margin-bottom: 1.5em;
+}
+
+.sadboi
+{
+    padding: 0em 2em 0em 2em;
+}
+
+.t-boi
+{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    padding-bottom: 1.1em;
+}
+
+.h-whiteboi
+{
+    color: #c8e7f0;
+}
+
+#pcboi
+{
+    width: 70%;
+    border-radius: 100%;
+    padding: 1.5em;
+}
+
+#snitchboi
+{
+    padding: 2em 1em;
+    color: #c8e7f0;
+    background-color: #e22d0e;
+}
+
+.italic
+{
+    padding-bottom: 2em;
+    font-style: italic;
+}
+
+#snitchboi h3
+{
+    font-size: 2em;
+    padding-bottom: 1.75em;
+    
+}
+
+/* Side stuff */
+
+#sideboi
+{
+    padding: 10px;
+}
+
+.artboi
+{
+    align-items: center;
+    margin: 25px;
+    border: 1px solid #dee1e3;
+    border-radius: 5px;
+}
+
+.imgboi
+{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+#grantboi
+{
+    font-size: 2em;
+}
+
+.artboi a
+{
+    text-decoration: none;
+}
+
+.h-artboi
+{
+    padding: 1em;
+}
+
+.p-artboi
+{
+    padding: 0px 15px 0px 15px;
+}
+
+/* Footer */
+
+#footboi
+{
+    background-color: #25a2c3;
+    color: #c8e7f0;
+    padding: 20px;
+}
+
+hr
+{
+    
+    margin: 1.5em 5em;
+}
+
+#footboi a
+{
+    color: #c8e7f0;
+}
