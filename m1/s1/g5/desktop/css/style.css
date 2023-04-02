@@ -92,7 +92,7 @@ body
 
 #pt2
 {
-    
+    max-width: 1100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +141,7 @@ a
     flex-wrap: nowrap;
     align-items: center;
     margin: 6em auto;
-    gap: 1em;
+    gap: 1.2em;
 }
 
 .artboi
@@ -164,7 +164,8 @@ a
 {
     background-color: #25a2c3;
     color: #c8e7f0;
-    padding: 2em 33em;
+    padding: 2em 39em;
+    max-width: 336px;
 }
 
 #footboi h3
@@ -192,14 +193,14 @@ li
     list-style: none;
 }
 
-hr
-{
-    height: 100%;
-}
-
 #footboi a
 {
     color: #c8e7f0;
+}
+
+hr
+{
+    max-width: 100%;
 }
 
 #endboi
