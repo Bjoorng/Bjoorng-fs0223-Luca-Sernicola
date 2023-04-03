@@ -4,8 +4,8 @@ var t =21
 
 function math(){
     if(onclick){
-        
+
         n + t
     }
-    document.getElementById("quickmath").innerHTML = n + t
+    document.getElementById("result").innerHTML = n + t
 }
