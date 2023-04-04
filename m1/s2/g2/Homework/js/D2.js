@@ -26,6 +26,7 @@ REGOLE
 */
 
 let name = "Luca";
+console.log(name)
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
@@ -34,7 +35,7 @@ let name = "Luca";
 function somma() {
   let x = 12;
   let y = 20;
-  let z = x + y
+  let z = x + y;
   console.log(z);
 }
 
