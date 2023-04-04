@@ -164,8 +164,9 @@ body
 {
     background-color: #25a2c3;
     color: #c8e7f0;
+    width: 100%;
     padding: 2em 39em;
-    max-width: 336px;
+    max-width: 400px;
 }
 
 #footboi h3
