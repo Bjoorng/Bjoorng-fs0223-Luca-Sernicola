@@ -23,7 +23,7 @@ REGOLE
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
 */
 
-let name = "Vincenzo";
+let name = "Luca";
 
 
 /* ESERCIZIO 3
@@ -52,7 +52,7 @@ somma();
   Dimostra l'impossibilità di riassegnare un valore ad una variabile dichiarata con il costrutto const.
 */
 
- name = "Salzano";
+ name = "Sernicola";
  /*
  const name = "Salzano"
  Uncaught SyntaxError: Identifier 'name' has already been declared (at D2.js:60:7)
