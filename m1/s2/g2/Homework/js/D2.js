@@ -55,7 +55,7 @@ somma();
  console.log(name)
 
  /*
- const name = "Salzano"
+ const name = "Sernicola"
  Uncaught SyntaxError: Identifier 'name' has already been declared (at D2.js:60:7)
 */
 
