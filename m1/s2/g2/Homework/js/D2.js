@@ -17,6 +17,8 @@ REGOLE
 - Boolean: un dato booleano è un tipo di dato che ammette solo due valori: true e false. È il tipo di dato che mi viene restituito quando voglio verificare delle condizioni.
 - Array: un array è una serie di valori contenuti all'interno di [] e separati da una virgola.
 - Object: è un insieme di proprietà e valori annidati all'interno di un blocco {}. Tutte le coppie proprietà/valore di un oggetto vanno separate da una virgola e possono essere di vari datatypes. Gli oggetti possono contenere anche delle funzioni: le funzioni contenute all'interno di un oggetto si chiamano metodi.
+- Undefined: è una proprietà che indica che ad  una variabile non è stato assegnato un valore oppure che essa non è stata definita.
+- Null: il valore null indica l'assenza intenzionale di un oggetto. Indica una mancanza di identificazione.
 */
 
 /* ESERCIZIO 2
