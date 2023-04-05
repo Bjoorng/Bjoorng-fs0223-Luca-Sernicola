@@ -3,9 +3,9 @@
 */
 
 {
-let a = 25
-let b = 68
-console.log(Math.max(a,b))
+let a = 25;
+let b = 68;
+console.log(Math.max(a,b));
 }
 
 /* ESERCIZIO 2
@@ -16,9 +16,9 @@ console.log(Math.max(a,b))
   var a = 9;
 
   if(a == 5){
-    console.log('equal')
+    console.log('equal');
   }else{
-    console.log('not equal')
+    console.log('not equal');
   }
 }
 
@@ -27,11 +27,11 @@ console.log(Math.max(a,b))
 */
 
 {
-  let a = 20
+  let a = 20;
   if (a % 5 == 0){
-    console.log('divisibile per 5')
+    console.log('divisibile per 5');
   }else{
-    console.log('non divisibile')
+    console.log('non divisibile');
   }
 }
 
@@ -40,16 +40,16 @@ console.log(Math.max(a,b))
 */
 
 {
-  let a = 24
-  let b = 16
+  let a = 24;
+  let b = 16;
   if(a == 8){
-    console.log('a = 8')
+    console.log('a = 8');
   }else if(b == 8){
-    console.log('b = 8')
+    console.log('b = 8');
   }else if(a + b == 8){
-    console.log('a + b = 8')
+    console.log('a + b = 8');
   }else if(a - b == 8){
-    console.log('a - b = 8')
+    console.log('a - b = 8');
   }
 }
 
@@ -61,15 +61,15 @@ console.log(Math.max(a,b))
 */
 
 {
-  let a = 5
-  let b = 8
-  let c = 20
-  let d = 80
-  let e = a + b + c + d
+  let a = 5;
+  let b = 8;
+  let c = 20;
+  let d = 80;
+  let e = a + b + c + d;
   if(e > 50){
-    console.log(e)
+    console.log(e);
   }else{
-    console.log(e + 10)  
+    console.log(e + 10);
   }
 }
 
@@ -86,7 +86,7 @@ console.log(Math.max(a,b))
   let e = a + b + c + d;
   let f = (e * 80)/100;
   if(e > 50){
-    console.log(f)
+    console.log(f);
   }else{
     console.log(f + 10)  
   }
@@ -117,21 +117,21 @@ console.log(Math.max(a,b))
   {
     if (a>c)
     {
-      console.log(b + ', ' +  a + ', ' + c)
+      console.log(b + ', ' +  a + ', ' + c);
     }
     else{
-      console.log(b + ', ' + c + ', ' + a)
+      console.log(b + ', ' + c + ', ' + a);
     }
   }
   else if (c>a && c>b)
   {
     if (a>b)
     {
-      console.log(c + ', ' + a + ', ' + b)
+      console.log(c + ', ' + a + ', ' + b);
     }
     else
     {
-      console.log(c + ', ' + b + ', ' + a)
+      console.log(c + ', ' + b + ', ' + a);
     }
   }
 }
@@ -141,11 +141,11 @@ console.log(Math.max(a,b))
 */
 
 {
-  let a = 'capra'
+  let a = 'capra';
   if(typeof(a) === 'number'){
-    console.log('number')
+    console.log('number');
   }else{
-    console.log('not a number')
+    console.log('not a number');
   }
   
 }
@@ -155,11 +155,11 @@ console.log(Math.max(a,b))
 */
 
 {
-  let a = 20
+  let a = 20;
   if (a % 2 == 0){
-    console.log('pari')
+    console.log('pari');
   }else{
-    console.log('dispari')
+    console.log('dispari');
   }
 }
 
@@ -168,7 +168,7 @@ console.log(Math.max(a,b))
   */
  
 {
-  let val = 7
+  let val = 7;
   if (val < 10 && val >= 5) {
       console.log("Meno di 10");
     } else if (val < 5) {
@@ -188,8 +188,8 @@ console.log(Math.max(a,b))
     lastName: 'Doe',
     skills: ['javascript', 'html', 'css'],
   }
-  me.city = 'Toronto'
-  console.log(me)
+  me.city = 'Toronto';
+  console.log(me);
 }
 
 /* ESERCIZIO 12
@@ -202,9 +202,9 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
-me.city = 'Toronto'
-delete me.lastName
-console.log(me)
+me.city = 'Toronto';
+delete me.lastName;
+console.log(me);
 }
 
 /* ESERCIZIO 13
@@ -216,18 +216,18 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
   }
-me.city = 'Toronto'
-me.skills.pop('css')
-console.log(me)
+me.city = 'Toronto';
+me.skills.pop('css');
+console.log(me);
 }
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 {
-let array = []
+let array = [];
 
-array.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-console.log(array)
+array.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+console.log(array);
 }
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
@@ -241,8 +241,8 @@ let index = array.indexOf(10);
 
 if (index !== -1){
 
-  array[index] = 100
+  array[index] = 100;
 }
 
-console.log(array)
+console.log(array);
 }
