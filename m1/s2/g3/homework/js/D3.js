@@ -232,5 +232,14 @@ console.log(array)
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
+{
+let array = [];
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+array.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+array.indexOf(10);
+
+if(index !== 0){
+  arr[index] = 10
+}
+console.log(array);
+}
