@@ -7,6 +7,6 @@ let ship = 10
     if(discount >= 50){
         document.write(`il tuo carrello è ${cart}£. la tua spedizione è gratuita`)
     }else{
-        document.write(`il tuo carrello è inferiore a ${free}£. il totale sarà ${discount + ship}`)
+        document.write(`il tuo carrello è inferiore a ${free}£. il totale sarà ${discount + ship}£`)
     }
 }
