@@ -4,7 +4,7 @@ let free = 50
 let ship = 10
 
 {
-    if(discount >= 50){
+    if(discount >= free){
         document.write(`il tuo carrello è ${cart}£. la tua spedizione è gratuita`)
     }else{
         document.write(`il tuo carrello è inferiore a ${free}£. il totale sarà ${discount + ship}£`)
