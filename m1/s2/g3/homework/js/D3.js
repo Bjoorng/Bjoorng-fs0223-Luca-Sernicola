@@ -236,10 +236,13 @@ console.log(array)
 let array = [];
 
 array.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-array.indexOf(10);
 
-if(index !== 0){
-  arr[index] = 10
+let index = array.indexOf(10);
+
+if (index !== -1){
+
+  array[index] = 100
 }
-console.log(array);
+
+console.log(array)
 }
