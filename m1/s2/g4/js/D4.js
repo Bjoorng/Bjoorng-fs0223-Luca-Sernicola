@@ -100,10 +100,14 @@ const starWarsCharacters = [
     gender: "male"
   }
 ];
+console.log(starWarsCharacters)
 
 /* ESERCIZIO 1
 Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
+
+let characters = []
+console.log(characters)
 
 /* ESERCIZIO 2
 Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name". 
@@ -111,24 +115,45 @@ Usa il valore contenuto inserendolo nell'array creato precedentemente.
 Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
+
+
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
+
+let femaleCharacters = [];
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
 */
 
+eyeColor = {
+  blue :  [],
+  yellow :  [],
+  brown :  [],
+  red :  [],
+  blueGray :  []
+}
+
 /* ESERCIZIO 5
   Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato
   Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
-  */
+*/
 
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
-  */
+*/
+
+let sum = 0;
+let i = 0;
+while (i < starWarsCharacters.length) {
+  sum += Number(starWarsCharacters[i].mass);
+  i++;
+  
+}
+console.log(sum)
 
 /* ESERCIZIO 7
 
@@ -144,9 +169,35 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+switch(sum){
+  case sum < 500 :
+    result = "Ship is under loaded";
+    break; 
+  case sum = 500 :
+    result = "Ship is half loaded";
+    break;
+  case sum > 700 :
+    result = "Warning: Load is over 700";
+    break;
+  case sum > 900 :
+    result = "Critical Load: Over 900";
+    break;
+  case sum > 1000 :
+    result = "DANGER! OVERLOAD ALERT: Jump ship now!";
+    break;
+}
+
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
+let newGender = 'robot'
+
+for(let i = 0; i<newGender.length; i++){
+  if(starWarsCharacters.gender = 'n/a'){
+    gender = newGender[i];
+  }
+}
+console.log(starWarsCharacters)
 
 /* EXTRA ESERCIZIO 9
 
@@ -157,6 +208,8 @@ Usa uno più for loop per raggiungere il risultato
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+
+console.log()
 
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
