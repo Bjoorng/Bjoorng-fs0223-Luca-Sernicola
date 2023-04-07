@@ -151,6 +151,5 @@ for (i = 0; i < charactersArray.length; i++){
     default:
       numbersArray.push(0);
   }
-
 }
 console.log(numbersArray);
