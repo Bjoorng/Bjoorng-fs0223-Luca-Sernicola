@@ -106,7 +106,7 @@ console.log(starWarsCharacters)
 Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
 
-let characters = []
+const characters = []
 
 
 /* ESERCIZIO 2
@@ -116,10 +116,11 @@ Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO",
 */
 
 for (let i=0; i<starWarsCharacters.length; i++){
-    const characters = starWarsCharacters[i];
+    const character = starWarsCharacters[i];
 
     characters.push(character.name);
 }
+console.log(characters)
 
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
@@ -178,7 +179,7 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
       eyeColor.red.push(character);
       break;
     case "blue-gray":
-      eyeColor["blue-gray"].push(character);
+      eyeColor.blueGray.push(character);
       break;
   }
 }
@@ -218,10 +219,10 @@ switch(true){
   case sum == 500 :
     console.log("Ship is half loaded");
     break;
-  case sum > 700 :
+  case sum > 700 && sum < 900:
     console.log("Warning: Load is over 700");
     break;
-  case sum > 900 :
+  case sum > 900 && sum <= 1000 :
     console.log("Critical Load: Over 900");
     break;
   case sum > 1000 :
