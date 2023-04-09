@@ -17,28 +17,28 @@ console.log(pets);
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
 */
 
-{
+
 pets.sort();
 console.log(pets);
-}
+
 
 /* ESERCIZIO 3
     Scrivi del codice per stampare nuovamente in console gli elementi dell'array "pets", questa volta in ordine invertito.
 */
 
-{
+
 pets.reverse();
 console.log(pets);
-}
+
 
 /* ESERCIZIO 4
     Scrivi del codice per spostare il primo elemento dall'array "pets" in ultima posizione.
 */
 
-{
+
 pets.push(pets.shift());
 console.log(pets);
-}
+
 
 /* ESERCIZIO 5
     Dato il seguente array di oggetti, scrivi del codice per aggiungere ad ognuno di essi una proprietà "licensePlate" con valore a tua scelta.
