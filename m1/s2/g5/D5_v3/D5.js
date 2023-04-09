@@ -89,6 +89,10 @@ console.log(cars)
 
 const justTrims = []
 
+for (let i = 0; i < cars.length; i++){
+  justTrims.push(cars[i].trims[0]);
+}
+
 console.log(justTrims)
 
 /* ESERCIZIO 8
