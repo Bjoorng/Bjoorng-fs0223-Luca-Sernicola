@@ -128,12 +128,18 @@ console.log(total)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
+
 {
-
-
+  function pickIt(arr){
+    var odd=[]
   
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 !== 0) {
+        odd.push(arr[i]);
+      }
+    }
+  } 
 }
-
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 
 const movies = [
@@ -250,25 +256,72 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 
-/*
-function getFilmById(movies) {
-  const movies.reduce((a, b) =>)
-  return film;
+{
+
+  function findOldest(){
+    let olderMovie = null;
+    for (let currentMovie of movies){
+      if (olderMovie == null || olderMovie.Year > currentMovie.Year){
+        olderMovie = currentMovie;
+        }
+      }
+    return olderMovie;
+  }
+
+  console.log(findOldest())
+
 }
 
-console.log(getFilmById("tt0077869"));
+// reduce
+
+{
+
+  function getOlder(){
+    return movies.reduce(function(olderMovie, currentMovie){
+      if(olderMovie.Year > currentMovie.Year){
+        return currentMovie;
+      }else{
+        return olderMovie;
+      }
+    })
+  }
+
+  console.log(getOlder())
+
+}
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+{
+  function arrayLength(){
+    return movies.length
+  }
+
+  console.log(arrayLength())
+
+}
+
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+
+
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+{
+
+  movies.filter(function(movie){
+    return movie.year >= 2000
+  })
+
+  console.log()
+
+}
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -279,8 +332,19 @@ function getFilmById(imdbID) {
   return film;
 }
 
-console.log(getFilmById("tt0077869"));
+console.log(getFilmById("tt4154796"));
 
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+
+{
+  function yearSum(){
+    return movies.reduce(function(p, c){
+      return p + Number(c.Year)
+    },0)
+  }
+
+  console.log(yearSum())
+
+}
