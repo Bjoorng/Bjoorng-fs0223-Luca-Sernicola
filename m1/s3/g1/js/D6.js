@@ -168,7 +168,7 @@ let a = 'conertone del primo maggio'
 
     let a = 'vuole ballare la samba'
 
-    function upperFirst(str){
+    function upperFirst(a){
         let b = a.split(" ")
         for(let i = 0; i < b.length; i++){
             b[i] = b[i].charAt(0).toUpperCase() + b[i].slice(1)
@@ -177,7 +177,7 @@ let a = 'conertone del primo maggio'
 
     }
 
-    console.log(upperFirst("vuole ballare la samba"))
+    console.log(upperFirst(a))
 
 
 }
@@ -204,14 +204,14 @@ let a = 'conertone del primo maggio'
 
 {
 
-function giveMeRandom(a){
-    const arr = []
-    for(let i = 0; i < a; i++){
-        arr.push(Math.floor(Math.random()*10))
-    }
-    return arr
-} 
+    function giveMeRandom(a){
+        const arr = []
+        for(let i = 0; i < a; i++){
+            arr.push(Math.floor(Math.random()*10))
+        }
+        return arr
+    } 
 
-console.log(giveMeRandom(12))
+    console.log(giveMeRandom(12))
 
 }
