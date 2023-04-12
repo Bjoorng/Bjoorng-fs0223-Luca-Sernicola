@@ -114,32 +114,39 @@ console.log(total)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-/*
-{
-  const array = ['ciao', 'a', 'tutti', 'sono', 'luca']
-  
-  array.forEach(element) => {
 
-  }
+{
+
+const letters = ['come', 'quando', 'fuori', 'piove']
+
+const length = array => {
+  return array.map(elem => elem.length);
+};
+
+console.log(length(letters))
 
 }
-*/
+
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 
-
 {
-  function pickIt(arr){
-    var odd=[]
-  
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 !== 0) {
-        odd.push(arr[i]);
-      }
+
+const odds = () => {
+  const array = [];
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      array.push(i);
     }
-  } 
+  }
+  return array;
+};
+
+console.log(odds());
+
 }
+
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 
 const movies = [
@@ -307,7 +314,15 @@ const movies = [
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+{
 
+  const titles = array => {
+    return array.map( elem => elem.Title);
+  };
+
+  console.log(titles(movies))
+
+}
 
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
