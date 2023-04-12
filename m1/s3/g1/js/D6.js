@@ -177,7 +177,7 @@ let a = 'conertone del primo maggio'
 
     }
 
-    console.log(upperFirst(b))
+    console.log(upperFirst(a))
 
 
 }
