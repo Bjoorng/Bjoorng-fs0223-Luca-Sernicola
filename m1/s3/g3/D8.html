@@ -161,19 +161,30 @@
       */
 
     const makeItClickable = function () {
-      let cut = document.getElementById("title")
-      cut.slice(0, -1);
+      
+      let h1 = document.querySelector('h1');
+      let text = h1.innerText.split('');
+      text.pop();
+      let newText = text.join('');
+      h1.textContent = newText;
     }
+
+    document.querySelector('h1')
+    .addEventListener('click', makeItClickable);
 
     /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
     const revealFooterLink = function () {
+      let foot = document.querySelector('footer');
+      let url = foot.querySelector('a').href;
 
-
+      alert(url);
     }
 
+    document.querySelector('footer')
+    .addEventListener('click', revealFooterLink)
     /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
@@ -181,7 +192,33 @@
 
     const generateTable = function () {
 
+      let target = document.querySelector('#tableArea')
 
+      let tab = document.createElement('table');
+      let thead = document.createElement('thead');
+      let tbody = document.createElement('tbody');
+      let thead = document.createElement('tr');
+
+      thead.append(frstTr);
+      tabella.append(thead, tbody);
+      target.append(tab);
+
+      let col = ['immagine', 'nome prodotto', 'quantità', 'prezzo']
+
+      for(let column of col){
+        let th = document.createElement('th');
+        th.textContent = column;
+        frstTr.append(th);
+      }
+
+      let obj = [
+        {
+          immagine: urlImg
+          nome_prodotto: lor
+          quantità: 
+          prezzo:
+        }
+      ]
     }
 
     /* ESERCIZIO 12
