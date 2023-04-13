@@ -10,9 +10,10 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 
+const pets = ['dog', 'cat', 'hamster', 'redfish']
+
 {
 
-const pets = ['dog', 'cat', 'hamster', 'redfish']
 pets.forEach(pet => {
   
   console.log(pet);
