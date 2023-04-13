@@ -10,8 +10,15 @@ REGOLE
     Dato il seguente array, scrivi del codice per stampare ogni elemento dell'array in console.
 */
 
+{
+
 const pets = ['dog', 'cat', 'hamster', 'redfish']
-console.log(pets);
+pets.forEach(pet => {
+  
+  console.log(pet);
+})
+
+}
 
 /* ESERCIZIO 2
     Scrivi del codice per ordinare alfabeticamente gli elementi dell'array "pets".
