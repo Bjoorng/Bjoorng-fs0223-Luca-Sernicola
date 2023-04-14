@@ -81,7 +81,8 @@
     */
 
     const changeTitle = function () {
-      document.getElementById('title').innerHTML = "new title";
+      const title = document.querySelector('h1')
+      title.innerText = 'new text'
     }
 
     
@@ -91,11 +92,10 @@
     */
 
     const addClassToTitle = function () {
-        let h1 = document.getElementById('title');
-        for (i = 0; i < h1.length; i++) {
-        h1[i].className += 'myHEading';
+        const title = document.querySelector('h1')
+        title.classList.add('myHeading')
       }
-    }
+    
     
     /* ESERCIZIO 3
        Scrivi una funzione per che cambi il testo dei p figli di un div
@@ -135,9 +135,14 @@
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
     */
 
-    const addParagraph = function () {
-      
+    const addParagraph = function (content) {
+      const div = document.querySelectorAll('div')[0]
+
+      let par = document.createElement("p")
+      par.innerText = content
+      div.appendChild(par)
     }
+    addParagraph('this is a new p')
 
     /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
@@ -153,8 +158,13 @@
       */
 
     const paintItGreen = function () {
-      document.ul.style.backgroundColor = "green"
+      const uls = document.querySelectorAll('ul')
+      for (let i = 0; i < uls.length; i++) {
+        uls[i].classList.add('bgGreen')
+      }
     }
+
+    paintItGreen()
 
     /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
@@ -185,6 +195,7 @@
 
     document.querySelector('footer')
     .addEventListener('click', revealFooterLink)
+
     /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
@@ -235,8 +246,8 @@
     */
 
     const hideAllImages = function () {
-
-
+      const images = document.querySelectorAll("img")
+      images.forEach(image => image.style.display = "none")
     }
 
     /* EXTRA ESERCIZIO 15
@@ -244,18 +255,27 @@
     */
 
     const changeColorWithRandom = function () {
+      let elementToChange = document.getElementById("changeMyColor")
+      elementToChange.onclick = function () {
+        const red = Math.round(Math.random() * 255);
+        const green = Math.round(Math.random() * 255);
+        const blue = Math.round(Math.random() * 255);
 
-
+        const randomColor = `rgb(${red},${green},${blue})`;
+        elementToChange.style.userSelect = "none" // elimina la possibilità di selezionare il testo, per non nasconderne il colore
+        elementToChange.style.cursor = "pointer" // cursore a puntatore
+        elementToChange.style.color = randomColor
+      }
     }
+
+    changeColorWithRandom()
 
     /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
     const deleteVowels = function () {
-
-      /* query selector su ogni elemento del body*/
-
+      document.querySelectorAll("h1,h2,h3,p,a,li,th,td").forEach((node) => node.innerText = [...node.innerText].filter(char => { char = char.toLowerCase(); return char !== "e" && char !== "a" && char !== "i" && char !== "o" && char !== "u" }).join(""))
     }
 
   </script>
