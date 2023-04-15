@@ -13,6 +13,10 @@ REGOLE
   Crea una variabile chiamata "sum" e assegnaci il risultato della somma tra i valori 10 e 20.
 */
 
+let sum = 10 + 20;
+
+console.log(sum);
+
 /* ESERCIZIO B
   Crea una variabile chiamata "random" e assegnaci un numero casuale tra 0 e 20 (deve essere generato dinamicamente a ogni esecuzione).
 */
@@ -32,39 +36,41 @@ REGOLE
 
 let me = 
   {
-  name: 'Luca',
-  cognome: 'Sernicola',
-  age: '29'
+    name: 'Luca',
+    cognome: 'Sernicola',
+    age: '29'
   }
 
-console.log(me)
+console.log(me);
 
 /* ESERCIZIO D
   Crea del codice per rimuovere programmaticamente la proprietà "age" dall'oggetto precedentemente creato.
 */
 
-delete me.age
-console.log(me)
+delete me.age;
+console.log(me);
 
 /* ESERCIZIO E
   Crea del codice per aggiungere programmaticamente all'oggetto precedentemente creato un array chiamato "skills", contenente i linguaggi di programmazione che conosci.
 */
 
-me.skills = ['non', 'conosco', 'linguaggi']
+me.skills = ['non', 'conosco', 'linguaggi', 'javascript'];
 
-console.log(me)
+console.log(me);
 
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
 
-me.skills.push('ciao')
+me.skills.push('ciao');
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 
-me.skills.pop()
+me.skills.pop();
+console.log(me);
 
 // Funzioni
 
@@ -75,10 +81,10 @@ me.skills.pop()
 {
 
   function dice(){
-    Math.floor(Math.random() * 6)
+    return Math.floor(Math.random() * 6 + 1);
   }
 
-  console.log(dice())
+  console.log(dice());
 
 }
 
@@ -88,18 +94,15 @@ me.skills.pop()
 
 {
 
-  let a = 20
-  let b = 49
-
-  function whoIsBigger (){
+  function whoIsBigger (a, b){
     if (a > b){
-      return a
+      return a;
     }else{
-      return b
+      return b;
     }
   }
 
-  console.log(whoIsBigger())
+  console.log(whoIsBigger(89, 65));
 
 }
 
@@ -111,11 +114,11 @@ me.skills.pop()
 
 {
 
-function splitMe(str){
-  return str.split(' ');
-}
+  function splitMe(str){
+    return str.split(' ');
+  }
 
-console.log(splitMe('questo è il compito settimanale'));
+  console.log(splitMe('questo è il compito settimanale'));
 
 }
 
@@ -127,14 +130,14 @@ console.log(splitMe('questo è il compito settimanale'));
 {
 
   function deleteOne(str, bool){
-    if (bool = true){
+    if (bool){
       return str.slice(1)
     }else{
       return str.slice(0, -1)
     }
   }
 
-  console.log(deleteOne('sugo all\'amatriciana'))
+  console.log(deleteOne('sugo all\'amatriciana', true))
 
 }
 
@@ -158,26 +161,29 @@ console.log(splitMe('questo è il compito settimanale'));
 */
 
 function isThisAnEmail(str) {
-  let regexp = /^[\w-]+(.[\w-]+)*@([\w-]+.)+[a-zA-Z]{2,7}$/;
+  let regexp = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
   let validEmail = regexp.test(str);
-  return true;
+  return validEmail;
 }
-console.log(isThisAnEmail('carramba che sorpresa'))
+console.log(isThisAnEmail('luca.sernicola@gmail.com'))
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-{
-
-const day = new Date()
-
-function whatDayIsIt(){
-  return day.getDay()
-}
-
-console.log(whatDayIsIt())
-
+let giorni = [
+  'domenica',
+  'lunedì',
+  'martedì',
+  'mercoledì',
+  'giovedì',
+  'venerdì',
+  'sabato',
+]
+function whatDayIsIt() {
+  let now = new Date();
+  let weekDay = now.getDay();
+  return giorni[weekDay];
 }
 
 /* ESERCIZIO 8
@@ -193,14 +199,48 @@ console.log(whatDayIsIt())
   }
 */
 
+function rollTheDices(n){
+  let obj = {
+    sum: 0,
+    values: []
+  };
+  for(let i = 0; i < n; i++){
+    let number = dice();
+    obj.values.push(number);
+  }
+  obj.sum = obj.values.reduce((a, b) => a + b);
+  return obj;
+}
+console.log(rollTheDices(6));
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+function howManyDays(date) {
+  let time = new Date().getTime() - new Date(date).getTime();
+  let days = Math.floor(time / (1000 * 60 * 60 * 24));
+  return days;
+}
+console.log(howManyDays('1994-01-13'));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+{
+  function isTodayMyBirthday(day, month){
+    let today = new Date();
+    let monthDay = today.getMonth() + 1;
+    let bDay = today.getDate();
+    if (bDay === day && monthDay === month){
+      return console.log(true);
+    }else{
+      return console.log(false);
+    }
+  }
+  isTodayMyBirthday(13, 1);
+}
 
 // Arrays & Oggetti
 
@@ -213,12 +253,20 @@ console.log(whatDayIsIt())
 
 {
 
+  let mango = {
+    name: 'Mango',
+    price: 6,
+    taste: 'good',
+    hobby: 'Sport',
+    country: 'Far Away'
+  }
+
   function deleteProp(obj, prop){
     delete obj[prop];
     return obj;
   }
 
-  console.log(deleteProp({ name: "Luca", surname: "Sernicola", age: '29' }, "surname"));
+  console.log(deleteProp(mango, "country"));
 
 }
 
@@ -227,11 +275,11 @@ console.log(whatDayIsIt())
 */
 
 function newestMovie(){
-  return movies.reduce(function(olderMovie, currentMovie){
-    if(olderMovie.Year < currentMovie.Year){
-      return currentMovie;
+  return movies.reduce(function(a, b){
+    if(a.Year < b.Year){
+      return b;
     }else{
-      return olderMovie;
+      return a;
     }
   })
 }
@@ -298,17 +346,17 @@ function searchByTitle(str) {
 {
 
   function searchAndDivide(str) {
-    let joint = {
+    let joined = {
     match: [],
     unmatch: [],
     }
     for (let a of movies){
       if (a.Title.includes(str)){
-        joint.match.push(a.Title);
+        joined.match.push(a.Title);
       } else {
-        joint.unmatch.push(a.Title);
+        joined.unmatch.push(a.Title);
       }
-    } return joint;
+    } return joined;
     }
 
 }
@@ -317,32 +365,15 @@ function searchByTitle(str) {
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
-function removeIndex(num) {
-  let newArr = [];
-  for (let movie of movies){
-    if (movie.Index!= num){
-      newArr.push(movie);
-    }
+{
+  
+  function removeIndex(num) {
+    movies.splice(num, 1);
+    return movies;
   }
-  return newArr;
 }
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
-
-{
-
-  function removeIndex(num) {
-    let newMovies = [];
-    for (let currentMovie of movies){
-      if (currentMovie.Index == num){
-        newMovies.pop(currentMovie);
-      }
-    }
-    return newMovies;
-  }
-
-}
-
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
@@ -364,39 +395,72 @@ function callTag(){
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+function stampaTd() {
+  let allTd = document.querySelectorAll('td')
+  for (let i of allTd) {
+    let tdCont = i.textContent;
+    console.log(tdCont);
+  }
+}
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
-const red = function () {
-  const url = document.querySelectorAll('a')
-  for (let i = 0; i < a.length; i++) {
-    uls[i]
+{
+
+  function addBackground(){
+    let url = document.querySelectorAll("a");
+    for (i = 0; i < url.length; i++){
+      url[i].style.backgroundColor = "red";
+    }
   }
+
 }
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
-const oneMore = function () {
-  let added = document.createElement("li");
-  let value = document.createTextNode("one more element");
-  added.appendChild(value);
-  document.getElementById("myList").appendChild(added)
+function addOne() {
+  let list = document.querySelector('#myList');
+  let nuovaLista = document.createElement('li');
+  nuovaLista.textContent = 'Nuovo elemento';
+  list.appendChild(nuovaLista);
 }
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+/* per eliminare solo i <li></li>
+function clearUl() {
+  let unorderedList = document.querySelector('#myList')
+  let liElements = unorderedList.querySelectorAll('li');
+  liElements.forEach(li => li.remove());
+}
+clearUl();
+
+*/
+
 function clearList() {
-  document.querySelector("#myList").remove;
+  document.querySelector("#myList").remove();
 }
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+{
+
+function addClass() {
+  let trs = document.querySelectorAll('tr');
+  for (let a of allTr) {
+    a.classList.add('test');
+    }
+  }
+
+}
 
 // [EXTRA] JS Avanzato
 
@@ -458,23 +522,17 @@ function isItPrime(n)
 { 
   if (n <= 1)
   return false;
-  
-  if (n <= 3)
-  return true;
-  
-  if (n%2 == 0 || n%3 == 0)
-  return false;
-  
-  for (let i=5; i * i <= n; i = i+6)
+
+  for (let i = 2; i <= Math.sqrt(n); i++)
   {
-    if (n % i == 0 || n % (i+2) == 0)
+    if (n % i == 0)
     return false;
   }
   
   return true;
 }
 
-console.log(isItPrime(121));
+console.log(isItPrime(3));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -602,5 +660,4 @@ console.log(onlyInLastMillennium());
 console.log(sumAllTheYears());
 console.log(searchByTitle('The Lord of the Rings'));
 console.log(searchAndDivide('Lord of the Flies'));
-console.log(removeIndex(2));
 console.log(removeIndex(2));
