@@ -157,23 +157,12 @@ console.log(splitMe('questo è il compito settimanale'));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
-/*
-{
-
-  let validation = `/^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/`;
-
-  function isThisAnEmail(str){
-    if (str.value.match(validation)){
-      return true
-    }else{
-      return false
-    }
-  }
-
-  console.log(isThisAnEmail('carramba che sorpresa'))
-
+function isThisAnEmail(str) {
+  let regexp = /^[\w-]+(.[\w-]+)*@([\w-]+.)+[a-zA-Z]{2,7}$/;
+  let validEmail = regexp.test(str);
+  return true;
 }
-*/
+console.log(isThisAnEmail('carramba che sorpresa'))
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
@@ -188,6 +177,7 @@ function whatDayIsIt(){
 }
 
 console.log(whatDayIsIt())
+
 }
 
 /* ESERCIZIO 8
@@ -202,25 +192,11 @@ console.log(whatDayIsIt())
       values: [3, 3, 4]
   }
 */
-/*
-function rollTheDices(4){
-
-}
 
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
-/*
-{
 
-  let date2 = newDate('2021-6-18')
-
-  function howManyDays(date1){
-    return Math.ceil((date2 - date1) / (1000 * 60 * 60 * 24))
-  }
-
-  console.log(howManyDays('1998-05-13') + 'days')
-}
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -251,13 +227,13 @@ function rollTheDices(4){
 */
 
 function newestMovie(){
-  let newestMovie = null;
-    for (let currentMovie of movies){
-      if (newestMovie == null || newestMovie.Year < currentMovie.Year){
-        newestMovie = currentMovie;
-        }
-      }
-    return newestMovie;
+  return movies.reduce(function(olderMovie, currentMovie){
+    if(olderMovie.Year < currentMovie.Year){
+      return currentMovie;
+    }else{
+      return olderMovie;
+    }
+  })
 }
 
 /* ESERCIZIO 13
@@ -290,7 +266,7 @@ function onlyInLastMillennium(){
     if (movie.Year < 2000){
       lastMillennium.push(movie);
     }
-  }
+  } return lastMillennium;
 }
 
 /* ESERCIZIO 16
@@ -303,7 +279,6 @@ function onlyInLastMillennium(){
       return a + Number(b.Year)
     },0)
   }
-
 }
 
 /* ESERCIZIO 17
@@ -319,25 +294,38 @@ function searchByTitle(str) {
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
 {
 
   function searchAndDivide(str) {
-    let match = [];
-    let unmatch = [];
-    for (let currentMovie of movies){
-      if (currentMovie.Title.includes(str)){
-        match.push(currentMovie);
-      } else {
-        unmatch.push(currentMovie);
-      }
+    let joint = {
+    match: [],
+    unmatch: [],
     }
-  }
+    for (let a of movies){
+      if (a.Title.includes(str)){
+        joint.match.push(a.Title);
+      } else {
+        joint.unmatch.push(a.Title);
+      }
+    } return joint;
+    }
 
 }
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(num) {
+  let newArr = [];
+  for (let movie of movies){
+    if (movie.Index!= num){
+      newArr.push(movie);
+    }
+  }
+  return newArr;
+}
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -354,13 +342,23 @@ function searchByTitle(str) {
   }
 
 }
+
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function callId(){
+  let container = document.querySelector("#container");
+};
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+function callTag(){
+  let tdAll = document.querySelectorAll('td');
+  }
+
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -370,13 +368,31 @@ function searchByTitle(str) {
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+const red = function () {
+  const url = document.querySelectorAll('a')
+  for (let i = 0; i < a.length; i++) {
+    uls[i]
+  }
+}
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const oneMore = function () {
+  let added = document.createElement("li");
+  let value = document.createTextNode("one more element");
+  added.appendChild(value);
+  document.getElementById("myList").appendChild(added)
+}
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
+
+function clearList() {
+  document.querySelector("#myList").remove;
+}
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
@@ -396,6 +412,16 @@ function searchByTitle(str) {
 
 */
 
+function halfTree(num) {
+  let str = '';
+  for (let i = 0; i < num; i++) {
+    str += '*';
+  console.log(str);
+  }
+}
+
+halfTree(3);
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -408,9 +434,47 @@ function searchByTitle(str) {
 
 */
 
+function tree(num) {
+  for (let i = 0; i < num; i++) {
+    let star = '';
+    let space = ((num - 1) - i);
+    if (i == 0) {
+      star += ''.repeat(space);
+    }
+    star += ' '.repeat(space);
+    let zero = 2 * i + 1;
+    star += '*'.repeat(zero);
+    console.log(star);
+  }
+}
+
+tree(5);
+
 /* ESERCIZIO 29
-  Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
+Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime(n)
+{ 
+  if (n <= 1)
+  return false;
+  
+  if (n <= 3)
+  return true;
+  
+  if (n%2 == 0 || n%3 == 0)
+  return false;
+  
+  for (let i=5; i * i <= n; i = i+6)
+  {
+    if (n % i == 0 || n % (i+2) == 0)
+    return false;
+  }
+  
+  return true;
+}
+
+console.log(isItPrime(121));
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
@@ -538,4 +602,5 @@ console.log(onlyInLastMillennium());
 console.log(sumAllTheYears());
 console.log(searchByTitle('The Lord of the Rings'));
 console.log(searchAndDivide('Lord of the Flies'));
+console.log(removeIndex(2));
 console.log(removeIndex(2));
