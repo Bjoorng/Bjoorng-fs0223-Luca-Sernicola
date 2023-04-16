@@ -332,9 +332,9 @@ function searchByTitle(str) {
     }
     for (let i of movies){
       if (i.Title.includes(str)){
-        joined.match.push(a.Title);
+        joined.match.push(i.Title);
       } else {
-        joined.unmatch.push(a.Title);
+        joined.unmatch.push(i.Title);
       }
     } return joined;
     }
@@ -438,7 +438,7 @@ clearList();
 {
 function addClass() {
   let trs = document.querySelectorAll('tr');
-  for (let i of allTr) {
+  for (let i of trs) {
     i.classList.add('test');
     }
   }
