@@ -279,8 +279,8 @@ function countMovies(){
 
 function onlyTheYears(){
   let years = [];
-  for (let currentMovie of movies){
-    years.push(currentMovie.Year);
+  for (let i of movies){
+    years.push(i.Year);
   }
   return years;
 }
@@ -330,8 +330,8 @@ function searchByTitle(str) {
     match: [],
     unmatch: [],
     }
-    for (let a of movies){
-      if (a.Title.includes(str)){
+    for (let i of movies){
+      if (i.Title.includes(str)){
         joined.match.push(a.Title);
       } else {
         joined.unmatch.push(a.Title);
@@ -438,8 +438,8 @@ clearList();
 {
 function addClass() {
   let trs = document.querySelectorAll('tr');
-  for (let a of allTr) {
-    a.classList.add('test');
+  for (let i of allTr) {
+    i.classList.add('test');
     }
   }
 addClass();
