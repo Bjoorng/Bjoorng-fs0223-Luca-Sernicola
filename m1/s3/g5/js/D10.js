@@ -402,6 +402,7 @@ function stampaTd() {
     console.log(tdCont);
   }
 }
+stampaTd();
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
@@ -415,7 +416,7 @@ function stampaTd() {
       url[i].style.backgroundColor = "red";
     }
   }
-
+addBackground();
 }
 
 /* ESERCIZIO 24
@@ -428,6 +429,8 @@ function addOne() {
   nuovaLista.textContent = 'Nuovo elemento';
   list.appendChild(nuovaLista);
 }
+
+addOne();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
@@ -447,6 +450,8 @@ function clearList() {
   document.querySelector("#myList").remove();
 }
 
+clearList; //per controllare la funzione aggiungere parentesi
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
@@ -459,6 +464,8 @@ function addClass() {
     a.classList.add('test');
     }
   }
+
+addClass();
 
 }
 
