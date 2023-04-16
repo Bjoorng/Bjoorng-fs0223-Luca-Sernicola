@@ -22,11 +22,9 @@ console.log(sum);
 */
 
 {
-
   let random = Math.floor(Math.random() * 21)
 
   console.log(random)
-
 }
 
 
@@ -40,7 +38,6 @@ let me =
     cognome: 'Sernicola',
     age: '29'
   }
-
 console.log(me);
 
 /* ESERCIZIO D
@@ -79,13 +76,10 @@ console.log(me);
 */
 
 {
-
   function dice(){
     return Math.floor(Math.random() * 6 + 1);
   }
-
   console.log(dice());
-
 }
 
 /* ESERCIZIO 2
@@ -93,7 +87,6 @@ console.log(me);
 */
 
 {
-
   function whoIsBigger (a, b){
     if (a > b){
       return a;
@@ -101,9 +94,7 @@ console.log(me);
       return b;
     }
   }
-
   console.log(whoIsBigger(89, 65));
-
 }
 
 /* ESERCIZIO 3
@@ -113,13 +104,10 @@ console.log(me);
 */
 
 {
-
   function splitMe(str){
     return str.split(' ');
   }
-
   console.log(splitMe('questo è il compito settimanale'));
-
 }
 
 /* ESERCIZIO 4
@@ -128,7 +116,6 @@ console.log(me);
 */
 
 {
-
   function deleteOne(str, bool){
     if (bool){
       return str.slice(1)
@@ -136,9 +123,7 @@ console.log(me);
       return str.slice(0, -1)
     }
   }
-
   console.log(deleteOne('sugo all\'amatriciana', true))
-
 }
 
 /* ESERCIZIO 5
@@ -148,7 +133,6 @@ console.log(me);
 */
 
 {
-
   function onlyLetters(str){
     return str.replace(/[0-9]/g, '');
   }
@@ -252,7 +236,6 @@ console.log(howManyDays('1994-01-13'));
 */
 
 {
-
   let mango = {
     name: 'Mango',
     price: 6,
@@ -265,9 +248,7 @@ console.log(howManyDays('1994-01-13'));
     delete obj[prop];
     return obj;
   }
-
   console.log(deleteProp(mango, "country"));
-
 }
 
 /* ESERCIZIO 12
@@ -344,7 +325,6 @@ function searchByTitle(str) {
 */
 
 {
-
   function searchAndDivide(str) {
     let joined = {
     match: [],
@@ -358,7 +338,6 @@ function searchByTitle(str) {
       }
     } return joined;
     }
-
 }
 
 /* ESERCIZIO 19
@@ -366,7 +345,6 @@ function searchByTitle(str) {
 */
 
 {
-  
   function removeIndex(num) {
     movies.splice(num, 1);
     return movies;
@@ -382,14 +360,17 @@ function callId(){
   let container = document.querySelector("#container");
 };
 
+callId();
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
 function callTag(){
   let tdAll = document.querySelectorAll('td');
-  }
+}
 
+callTag();
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
@@ -409,7 +390,6 @@ stampaTd();
 */
 
 {
-
   function addBackground(){
     let url = document.querySelectorAll("a");
     for (i = 0; i < url.length; i++){
@@ -425,11 +405,10 @@ addBackground();
 
 function addOne() {
   let list = document.querySelector('#myList');
-  let nuovaLista = document.createElement('li');
-  nuovaLista.textContent = 'Nuovo elemento';
-  list.appendChild(nuovaLista);
+  let newLi= document.createElement('li');
+  newLi.textContent = 'Nuovo elemento';
+  list.appendChild(newLi);
 }
-
 addOne();
 
 /* ESERCIZIO 25
@@ -437,8 +416,9 @@ addOne();
 */
 
 /* per eliminare solo i <li></li>
+
 function clearUl() {
-  let unorderedList = document.querySelector('#myList')
+  let unorderedList = document.querySelector('#myList');
   let liElements = unorderedList.querySelectorAll('li');
   liElements.forEach(li => li.remove());
 }
@@ -449,24 +429,20 @@ clearUl();
 function clearList() {
   document.querySelector("#myList").remove();
 }
-
-clearList; //per controllare la funzione aggiungere parentesi
+clearList();
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
 
 {
-
 function addClass() {
   let trs = document.querySelectorAll('tr');
   for (let a of allTr) {
     a.classList.add('test');
     }
   }
-
 addClass();
-
 }
 
 // [EXTRA] JS Avanzato
