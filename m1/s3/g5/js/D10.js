@@ -171,19 +171,19 @@ console.log(isThisAnEmail('luca.sernicola@gmail.com'))
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
 
-let giorni = [
-  'domenica',
-  'lunedì',
-  'martedì',
-  'mercoledì',
-  'giovedì',
-  'venerdì',
-  'sabato',
+let days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
 ]
 function whatDayIsIt() {
   let now = new Date();
   let weekDay = now.getDay();
-  return giorni[weekDay];
+  return days[weekDay];
 }
 
 /* ESERCIZIO 8
