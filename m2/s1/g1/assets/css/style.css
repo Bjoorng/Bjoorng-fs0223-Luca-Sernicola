@@ -323,6 +323,9 @@ button {
   button {
     padding: 15px 30px;
   }
+  section h2 {
+    bottom: 155px;
+  }
 }
 
 /* ELEMENTI NELL' ASIDE */
