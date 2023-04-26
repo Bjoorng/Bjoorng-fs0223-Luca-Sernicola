@@ -196,11 +196,6 @@ h1 + p {
   }
 }
 
-underlined {
-  position: relative;
-  z-index: 1;
-}
-
 .underline {
   position: relative;
   bottom:43px;

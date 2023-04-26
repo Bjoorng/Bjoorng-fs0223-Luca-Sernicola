@@ -1,0 +1,59 @@
+.navDiv{
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 50px;
+}
+
+.navBar {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: wheat;
+    padding: 10px;
+    border-radius: 50px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+#bee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    order: -1;
+    padding: 20px 40px;
+}
+
+ul img {
+    width: 20%;
+}
+
+.barLi {
+    text-align: center;
+    background-color: burlywood;
+    margin: 10px 10px;
+    padding: 10px 0px 10px 0px;
+    border-radius: 50px;
+    width: 45%;
+}
+
+.barLink {
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width: 440px) {
+    .barLi {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .navBar {
+        flex-wrap: nowrap;
+    }
+    #bee {
+        order: 0;
+    }
+}
