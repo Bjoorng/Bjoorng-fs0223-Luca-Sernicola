@@ -1,0 +1,114 @@
+body {
+    font-family: Indie Flower, cursive;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 12em 0;
+    background-color: #666;
+}
+
+.postIt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    margin: 1.5em 2em;
+    border: 1px solid #666;
+    border-radius: 1em;
+    box-shadow: 8px 8px 8px 0;
+    transition: 1s;
+    
+}
+
+.postIt:hover {
+    transform: scale(1.3, 1.3);
+    rotate: 0deg;
+    z-index: 1;
+    transition: 1s;
+}
+
+.postTitle {
+    font-size: 4.5em;
+    margin-bottom: 0.8em;
+    font-weight: bold;
+}
+
+.postP {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.yellow {
+    background: radial-gradient(circle at 39.02% 9.02%, #ffffff 0, #ffffff 10%, #ffffff 20%, #fffffb 30%, #ffffe2 40%, #fafac8 50%, #e1edb0 60%, #c7e19d 70%, #abd78f 80%, #8fcf86 90%, #71c782 100%);
+}
+
+.green {
+    background: radial-gradient(circle at 39.02% 9.02%, #ffffff 0, #ffffff 4.55%, #fffffb 9.09%, #fffff7 13.64%, #fffff2 18.18%, #ffffed 22.73%, #ffffe7 27.27%, #ffffe1 31.82%, #f7ffdb 36.36%, #e9ffd5 40.91%, #d9fbcf 45.45%, #c7f6ca 50%, #b3f1c7 54.55%, #9fecc6 59.09%, #8be8c8 63.64%, #76e4cc 68.18%, #60e0d1 72.73%, #49ddd8 77.27%, #2edadf 81.82%, #01d7e7 86.36%, #00d4ef 90.91%, #00d2f7 95.45%, #00d0fe 100%);
+}
+
+.lavender {
+    background: radial-gradient(circle at 39.02% 9.02%, #ffffff 0, #f3f0ff 25%, #c6c5ef 50%, #909ee0 75%, #497dd3 100%);
+} 
+
+.first {
+    rotate: -4deg;
+    animation: splatPostIt 3s backwards;
+}
+
+.second {
+    rotate: 4deg;
+    animation: splatPostIt 3s 2s backwards;
+}
+
+.third {
+    rotate: -12deg;
+    animation: splatPostIt 3s 4s backwards;
+}
+
+.fourth {
+    rotate: 18deg;
+    animation: splatPostIt 3s 6s backwards;
+}
+
+.fifth {
+    rotate: -4deg;
+    animation: splatPostIt 3s 8s backwards;
+}
+
+.sixth {
+    rotate: -6deg;
+    animation: splatPostIt 2s 10s backwards;
+}
+
+.seventh {
+    rotate: -10deg;
+    animation: splatPostIt 2s 12s backwards;
+}
+
+.eighth {
+    rotate: 12deg;
+    animation: splatPostIt 3s 14s backwards;
+}
+
+@keyframes splatPostIt {
+    0% {
+        transform: scale(3, 3);
+        rotate: 5760deg;
+        opacity: 0;
+        z-index: 1;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        z-index: 1;
+    }
+}
