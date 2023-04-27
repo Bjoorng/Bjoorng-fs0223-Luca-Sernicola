@@ -83,12 +83,12 @@ body {
 
 .sixth {
     rotate: -6deg;
-    animation: splatPostIt 2s 10s backwards;
+    animation: splatPostIt 3s 10s backwards;
 }
 
 .seventh {
     rotate: -10deg;
-    animation: splatPostIt 2s 12s backwards;
+    animation: splatPostIt 3s 12s backwards;
 }
 
 .eighth {
