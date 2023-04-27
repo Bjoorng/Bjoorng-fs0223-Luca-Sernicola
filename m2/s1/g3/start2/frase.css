@@ -25,22 +25,22 @@
 
 .first {
     opacity: 0;
-    animation: fading 3s 1s infinite;
+    animation: fading 6s ease-in infinite;
 }
 
 .second {
     opacity: 0;
-    animation: fading 3s 3s infinite;
+    animation: fading 6s ease-in 2s infinite;
 }
 
 .third {
     opacity: 0;
-    animation: fading 3s 7s infinite;
+    animation: fading 6s ease-in 4s infinite;
 }
 
 @keyframes fading {
     0% {
-        transform: translate(0, -100%);
+        transform: translate(0, -100px);
         opacity: 0;
     }
     50% {
@@ -48,7 +48,7 @@
         opacity: 1;
     }
     100% {
-        transform: translate(0, 100%);
+        transform: translate(0, 100px);
         opacity: 0;
     }
 }
