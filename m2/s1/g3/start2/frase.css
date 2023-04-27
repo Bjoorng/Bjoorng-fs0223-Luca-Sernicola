@@ -17,8 +17,6 @@
 }
 
 .parole i {
-    display: flex;
-    flex-direction: column;
     font-weight: bold;
     color: blue;
     position: absolute;
