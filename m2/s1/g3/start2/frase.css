@@ -8,6 +8,12 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #testoAlternato {
     font-size: 2em;
     width: 800px;
