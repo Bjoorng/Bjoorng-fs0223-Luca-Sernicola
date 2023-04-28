@@ -1,0 +1,348 @@
+/* General */
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+.boss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+
+header {
+    background-color: yellow;
+    width: 100%;
+    font-family: Spectral, serif;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    height: 75px;
+    margin: 0 256px;
+}
+
+.blackBorder {
+    border-bottom: 1px solid black;
+}
+
+.medLogo {
+    width: 200px;
+    height: 50px;
+    background-image: url(../imgs/svg/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.navLi {
+    font-size: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLi li {
+    margin-left: 20px;
+}
+
+button {
+    display: none;
+}
+
+.startLabel {
+    color: white;
+    background-color: rgb(60, 60, 60);
+    padding: 0.5em;
+    border-radius: 50px;
+}
+
+.startLabel:hover {
+    background-color: black;
+}
+
+.divM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+main {
+    font-family: Roboto, sans-serif;
+}
+
+.curious {
+    display: flex;
+    flex-direction: column;
+    font-size: 2em;
+    width: 550px;
+    margin: 0 128px 0 256px;
+}
+
+.curious h1 {
+    font-size: 3em;
+    margin-bottom: 35px;
+}
+
+.curious p {
+    margin-bottom: 32px;
+}
+
+.readLabel {
+    background-color: rgb(60, 60, 60);
+    color: white;
+    padding: 0.5em;
+    border-radius: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+.readLabel:hover {
+    border-radius: 50px;
+    background-color: black;
+}
+
+.trendContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 16px 0;
+    margin: 0 256px;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px 0;
+    width: 100%;
+}
+
+.trendNum {
+    width: 40px;
+    font-size: 32px;
+    margin-right: 16px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.articleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.trendContent {
+    display: flex;
+}
+
+.trendArt {
+    display: flex;
+    font-size: 24px;
+    flex-basis: 33.33333333333333%;;
+    max-width: 33.33333333333333%;
+    margin: 0 0 20px 0;
+}
+
+.trendAuthor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.artTitle {
+    font-weight: bold;
+}
+
+.trendContent span {
+    font-size: 16px;
+}
+
+.trendPic {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 0 5px 5px 0;
+}
+
+.authorPic1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image01.jpeg);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.authorPic2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image02.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+.authorPic3 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image03.jpeg);
+    background-size: cover;
+    margin-right: 10px;
+}
+.authorPic4 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image04.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+.authorPic5 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image05.jpeg);
+    background-size: cover;
+    margin-right: 10px;
+}
+.authorPic6 {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-image: url(../imgs/image06.png);
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.greyBorder {
+    border-bottom: 1px solid grey;
+}
+
+/* Bottom articles */
+
+.lowContainer {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    padding-top: 65px;
+    margin: 0 256px;
+}
+
+.artLow {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 150%;
+}
+
+.lowWhole {
+    display: flex;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+.lowAuthor {
+    margin: 10px 0 20px 0;
+}
+
+.lowImg {
+    width: 350px;
+    height: 200px;
+    background-image: url(../imgs/image10.jpeg);
+    background-color: cover;
+    background-position: center;
+}
+
+.lowContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.lowContent h4 {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lowContent h5 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.lowTextCont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 800px;
+    margin-right: 10px;
+}
+
+.lowTitle {
+    margin-bottom: 40px;
+}
+
+.more {
+    display: flex;
+    position: sticky;
+    top: 65px;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.moreText {
+    margin: 30px 0;
+}
+
+.borderGrey {
+    width: 520px;
+    border-bottom: 1px solid lightgray;
+}
+
+.moreText a {
+    color: green;
+}
+
+.moreLinks{
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.upLink {
+    margin: 5px 20px 10px 0;
+    padding: 5px 20px;
+    background-color: lightgrey;
+    border-radius: 50px;
+}
+
+.botLink {
+    background-color: lightgrey;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+
+.footLink {
+    padding: 15px 20px;
+}
+
+.moreFoot {
+    margin: 30px 0;
+}
+
+.footLink {
+    margin-bottom: 15px;
+    color: rgb(109, 109, 109);
+}

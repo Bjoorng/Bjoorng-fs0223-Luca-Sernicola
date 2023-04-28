@@ -23,7 +23,7 @@ body {
     border-radius: 1em;
     box-shadow: 8px 8px 8px 0;
     transition: 1s;
-    
+
 }
 
 .postIt:hover {
@@ -54,7 +54,7 @@ body {
 
 .lavender {
     background: radial-gradient(circle at 39.02% 9.02%, #ffffff 0, #f3f0ff 25%, #c6c5ef 50%, #909ee0 75%, #497dd3 100%);
-} 
+}
 
 .first {
     rotate: -4deg;
@@ -63,43 +63,43 @@ body {
 
 .second {
     rotate: 4deg;
-    animation: splatPostIt 3s 2s backwards;
+    animation: splatPostIt 3s 3s backwards;
 }
 
 .third {
     rotate: -12deg;
-    animation: splatPostIt 3s 4s backwards;
+    animation: splatPostIt 3s 6s backwards;
 }
 
 .fourth {
     rotate: 18deg;
-    animation: splatPostIt 3s 6s backwards;
+    animation: splatPostIt 3s 9s backwards;
 }
 
 .fifth {
     rotate: -4deg;
-    animation: splatPostIt 3s 8s backwards;
+    animation: splatPostIt 3s 12s backwards;
 }
 
 .sixth {
     rotate: -6deg;
-    animation: splatPostIt 3s 10s backwards;
+    animation: splatPostIt 3s 15s backwards;
 }
 
 .seventh {
     rotate: -10deg;
-    animation: splatPostIt 3s 12s backwards;
+    animation: splatPostIt 3s 18s backwards;
 }
 
 .eighth {
     rotate: 12deg;
-    animation: splatPostIt 3s 14s backwards;
+    animation: splatPostIt 3s 21s backwards;
 }
 
 @keyframes splatPostIt {
     0% {
         transform: scale(3, 3);
-        rotate: 5760deg;
+        rotate: 11520deg;
         opacity: 0;
         z-index: 1;
     }
