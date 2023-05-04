@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #f4f4f4;
+  height: 50px;
+  font-family: "Bruno Ace SC", cursive;
+}
+nav a {
+  text-decoration: none;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.hero {
+  background-color: #640fc5;
+}/*# sourceMappingURL=style.css.map */

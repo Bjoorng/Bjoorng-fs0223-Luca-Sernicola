@@ -1,0 +1,29 @@
+@import 'scss/partials/reset';
+@import 'scss/partials/mixins';
+@import 'scss/partials/vars';
+@import 'scss/partials/spacings';
+@import 'scss/partials/colors';
+@import 'scss/partials/fonts';
+@import 'scss/partials/buttons';
+
+nav {
+    @include flexRow;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: $text-color;
+    height: $logo-height + 20px;
+    font-family: $font-family;
+    a {
+        text-decoration: none;
+        margin-left: $main-margin-left - 0.5em;
+        margin-right: $main-margin-right - 0.5em;
+    }
+    img {
+        @include floating;
+    }
+}
+
+.hero {
+    background-color: $bg-hero-color;
+}

@@ -1,0 +1,14 @@
+@mixin flexRow {
+    display: flex;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin floating {
+    border-radius: 50px;
+    box-shadow: 5px 10px 8;
+    margin: $main-margin-top;
+}
