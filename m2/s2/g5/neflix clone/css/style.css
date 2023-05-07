@@ -16,12 +16,17 @@
   }
   
   #logo {
-    height: 48px;
+    width: 200px;
   }
   
   #avatar {
     height: 36px;
   }
+
+  .kids-logo {
+    height: 36px;
+  }
+
   #avatar-small {
     height: 24px;
     margin-right: 10px;
@@ -67,11 +72,13 @@
   }
   
   .carousel-control-next {
-    margin-right: -5%;
+    width: 32px;
+    margin-bottom: 36px;
   }
   
   .carousel-control-prev {
-    margin-left: -5%;
+    width: 32px;
+    margin-bottom: 36px;
   }
   
   .account-page {
@@ -124,11 +131,13 @@
     color: #000 !important;
   }
 
-  .sottolineatura {
+/* Settings */
+
+  .underline {
     text-decoration: none;
 }
 
-.t1 {
+  .t1 {
     font-size: 0.8rem;
     font-weight: bold;
     background-color: rgb(233, 231, 231);
