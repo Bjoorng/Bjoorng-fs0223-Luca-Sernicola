@@ -38,7 +38,11 @@ class Pet {
     this.breedType = breed;
   }
   static compareNames = function (pet1, pet2) {
-    return pet1.owner === pet2.owner;
+    if (pet1.owner === pet2.owner) {
+      return true;
+    } else {
+      return false;
+    }
   };
 }
 
@@ -58,7 +62,6 @@ formReference.addEventListener("submit", (e) => {
       let newList = document.createElement("li");
       newList.innerText =
         pet.petName + " " + pet.owner + " " + pet.species + " " + pet.breedType;
-      list.appendChild(newList);
     });
   };
   pets.push(pet);
