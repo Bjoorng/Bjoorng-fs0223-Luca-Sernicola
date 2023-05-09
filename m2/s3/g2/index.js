@@ -29,11 +29,13 @@ setInterval(() => {
 
 //Contatore2
 
+let counter = 0;
+
 if (typeof Storage !== "undefined") {
   if (sessionStorage.counter) {
-    var counter = parseInt(sessionStorage.counter);
+    counter = parseInt(sessionStorage.counter);
   } else {
-    var counter = 0;
+    counter = 0;
   }
 
   setInterval(function () {
