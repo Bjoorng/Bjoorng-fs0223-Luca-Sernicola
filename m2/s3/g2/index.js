@@ -18,34 +18,18 @@ document.querySelector("#remove-btn").addEventListener("click", function () {
 });
 
 let count = sessionStorage.getItem("count") || 0;
-const timer = document.querySelector("#timer");
+let timer = document.querySelector("#timer");
+let seconds = 0;
+let counter = document.querySelector("#counter");
 
 setInterval(() => {
   count++;
-  timer.textContent = `Session time: ${count} secondi`;
+  timer.textContent = `Session time: ${count} seconds`;
 
   sessionStorage.setItem("count", count);
 }, 1000);
 
-//Contatore2
-
-let counter = 0;
-
-if (typeof Storage !== "undefined") {
-  if (sessionStorage.counter) {
-    counter = parseInt(sessionStorage.counter);
-  } else {
-    counter = 0;
-  }
-
-  setInterval(function () {
-    counter++;
-
-    sessionStorage.counter = counter;
-
-    document.querySelector("#counter").innerHTML = counter;
-  }, 1000);
-} else {
-  document.querySelector("#counter").innerHTML =
-    "Session storage non supportato dal browser.";
-}
+setInterval(() => {
+  seconds++;
+  counter.textContent = `${seconds}`;
+}, 1000);
