@@ -1,24 +1,24 @@
 const savedName = localStorage.getItem("name");
 if (savedName) {
-  document.getElementById("saved-name").textContent = "Saved: " + savedName;
+  document.querySelector("#saved-name").textContent = "Saved: " + savedName;
 }
 
-document.getElementById("save-btn").addEventListener("click", function () {
+document.querySelector("#save-btn").addEventListener("click", function () {
   const name = document.getElementById("name").value;
   if (name) {
     localStorage.setItem("name", name);
-    document.getElementById("saved-name").textContent = "Saved: " + name;
+    document.querySelector("#saved-name").textContent = "Saved: " + name;
   }
 });
 
-document.getElementById("remove-btn").addEventListener("click", function () {
+document.querySelector("#remove-btn").addEventListener("click", function () {
   localStorage.removeItem("name");
-  document.getElementById("name").value = "";
-  document.getElementById("saved-name").textContent = "";
+  document.querySelector("#name").value = "";
+  document.querySelector("#saved-name").textContent = "";
 });
 
 let count = sessionStorage.getItem("count") || 0;
-const timer = document.getElementById("timer");
+const timer = document.querySelector("#timer");
 
 setInterval(() => {
   count++;
@@ -43,9 +43,9 @@ if (typeof Storage !== "undefined") {
 
     sessionStorage.counter = counter;
 
-    document.getElementById("counter").innerHTML = counter;
+    document.querySelector("#counter").innerHTML = counter;
   }, 1000);
 } else {
-  document.getElementById("counter").innerHTML =
+  document.querySelector("#counter").innerHTML =
     "Session storage non supportato dal browser.";
 }
