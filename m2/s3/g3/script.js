@@ -33,14 +33,21 @@ fetch("https://striveschool-api.herokuapp.com/books")
         button.addEventListener("click", function () {
           let card = this.closest(".card");
           let listItem = document.createElement("li");
-          listItem.classList.add("d-flex", "flex-column");
+          listItem.classList.add("d-flex", "flex-column", "item");
           listItem.innerHTML = `
           <p class="title">${book.title}</p>
           <p class="price">${book.price}</p>
-          <button class="btn btn-danger">Remove</button>
+          <button class="btn btn-danger outOfCart">Remove</button>
           `;
-
           cart.appendChild(listItem);
+          let outOfCart = cart.querySelectorAll(".outOfCart");
+          outOfCart.forEach((button) => {
+            button.addEventListener("click", function () {
+              let item = this.closest(".item");
+              item.classList.remove("d-flex");
+              item.classList.add("d-none");
+            });
+          });
         });
       });
 
