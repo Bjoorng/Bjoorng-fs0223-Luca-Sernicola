@@ -3,7 +3,7 @@ if (savedName) {
   document.querySelector("#saved-name").textContent = "Saved: " + savedName;
 }
 
-document.querySelector("#save-btn").addEventListener("click", function () {
+document.querySelector("#save-btn").addEventListener("click", function (e) {
   const name = document.getElementById("name").value;
   if (name) {
     localStorage.setItem("name", name);
