@@ -49,9 +49,8 @@ fetch("https://striveschool-api.herokuapp.com/books")
               item.classList.remove("d-flex");
               item.classList.add("d-none");
               let titles = document.querySelectorAll(".title");
-              console.log(titles);
               for (title of titles) {
-                if (title.textContent.includes(`${book.title}`)) {
+                if (title.textContent === `${book.title}`) {
                   localStorage.removeItem(`${book.title}`);
                 }
               }
