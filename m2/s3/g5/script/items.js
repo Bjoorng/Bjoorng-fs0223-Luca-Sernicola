@@ -1,3 +1,5 @@
+const totalPrice = [];
+
 const getProducts = function () {
   fetch("https://striveschool-api.herokuapp.com/api/product/", {
     headers: {
@@ -16,22 +18,26 @@ const getProducts = function () {
     .then((data) => {
       console.log("PRODUCTS IN DB", data);
       data.forEach((product) => {
-        let colTemplate = `
-            <div class="col col-md-2 p-5">
-              <div class="card rounded-5">
-              <img class="h-100 w-100 rounded-top-5" src="${product.imageUrl}" alt"${product.alt}">
+        let colTemplate = document.createElement("div");
+        colTemplate.classList.add("col", "col-md-3", "p-1", "whole-card");
+        colTemplate.innerHTML = `
+              <div class="card second-cont">
+              <img class="card-picture" src="${product.imageUrl}" alt"${product.alt}">
                 <div class="card-body">
                   <h5 class="card-title">${product.name}</h5>
                   <p class="card-text mb-0">
                     ${product.description}
                   </p>
+                  <div class="card-info d-flex justify-content-between my-2">
                   <p class="card-text">
                     ${product.brand}
                   </p>
-                  <p>${product.price}</p>
-                  <div class="d-flex justify-content-around">
-                  <a href="./backoffice.html?productId=${product._id}" class="btn btn-primary w-100 p-2 mx-1">Edit</a>
-                  <a href="./findmore.html?productId=${product._id}" class="btn btn-primary w-100 p-2 mx-1">Details</a>
+                  <p>${product.price}$</p>
+                  </div>
+                  <div class="buttons">
+                  <a href="./backoffice.html?productId=${product._id}" class="btn edit p-2 mx-1">Edit</a>
+                  <a href="./findmore.html?productId=${product._id}" class="btn details p-2 mx-1">Details</a>
+                  <a href="#" class="btn buy p-2 mx-1">Buy</a>
                   </div>
                 </div>
               </div>
@@ -39,8 +45,52 @@ const getProducts = function () {
             `;
 
         let rowReference = document.getElementById("products-container");
-        rowReference.innerHTML += colTemplate;
+        rowReference.appendChild(colTemplate);
+
+        let cart = document.querySelector("#cart");
+        let total = document.querySelector("#total");
+
+        let buyButton = colTemplate.querySelectorAll(".buy");
+        buyButton.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            let item = this.closest(".whole-card");
+            let listItem = document.createElement("li");
+            listItem.innerHTML = `
+          <li class="dropdown-item">
+          <p class="name">${product.name}</p>
+          <p class="price">${product.price}$</p>
+          <button class="btn btn-danger outOfCart">Remove</button>
+          </li>
+          `;
+            totalPrice.push(product.price);
+            total.textContent =
+              "Your Total is:" + totalPrice.reduce(getSum, 0) + "$";
+
+            function getSum(total, num) {
+              return total + num;
+            }
+            cart.appendChild(listItem);
+            let outOfCart = cart.querySelectorAll(".outOfCart");
+            outOfCart.forEach((button) => {
+              button.addEventListener("click", function () {
+                let item = this.closest("li");
+                item.classList.add("d-none");
+                let removedPrice = parseFloat(
+                  item.querySelector(".price").textContent
+                );
+                let removedIndex = totalPrice.indexOf(removedPrice);
+                if (removedIndex !== -1) {
+                  totalPrice.splice(removedIndex, 1);
+                }
+                total.textContent =
+                  "Your Total is:" + totalPrice.reduce(getSum, 0) + "$";
+              });
+            });
+          });
+        });
       });
+      console.log(totalPrice);
     })
     .catch((error) => {
       console.log(error);

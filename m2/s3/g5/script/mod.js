@@ -10,9 +10,10 @@ if (productId) {
 
   document.getElementById("save-button").innerText = "Edit Product";
 
+  let deleteBut = document.querySelector("#deleteButton");
   let deleteButton = document.getElementById("delete-button");
   deleteButton.classList.remove("d-none");
-  deleteButton.addEventListener("click", () => {
+  deleteBut.addEventListener("click", () => {
     fetch(PRODUCT_URL + "/" + productId, {
       headers: {
         Authorization:
@@ -23,7 +24,6 @@ if (productId) {
     })
       .then((res) => {
         if (res.ok) {
-          alert("Product deleted successfully");
           location.assign("./home.html");
         } else {
           throw new Error("Can't delete product");
@@ -52,8 +52,9 @@ if (productId) {
       console.log("Product data", product);
       document.querySelector("#name").value = product.name;
       document.querySelector("#description").value = product.description;
+      document.querySelector("#brand").value = product.brand;
       document.querySelector("#price").value = product.price;
-      document.querySelector("#imageUrl").value = product.img;
+      document.querySelector("#imageUrl").value = product.imageUrl;
     })
     .catch((error) => {
       console.log(error);

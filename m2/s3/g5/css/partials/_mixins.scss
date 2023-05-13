@@ -1,0 +1,143 @@
+@mixin body {
+    background: linear-gradient(rgba(34,90,223,1) 0%, rgba(141,25,191,1) 60%, rgba(0,0,0,1) 100%);
+    font-family: 'Press Start 2P', cursive;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin nav {
+    display: flex;
+    align-items: end;
+    min-height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: black;
+    border-bottom: 3px solid rgb(255, 255, 255);
+    .first-child {
+        margin-left: 30px;
+    }
+}
+
+@mixin a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+@mixin add {
+    font-size: 40px;
+    color: rgb(119, 230, 119);
+    margin-left: 60px;
+}
+
+@mixin navContainer {
+    margin: 0 auto;
+}
+
+@mixin collapse {
+    justify-content: end;
+}
+
+@mixin title {
+    color: white;
+    font-size: 5em;
+}
+
+@mixin card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(201, 201, 201);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 300px;
+    font-size: 0.8em;
+}
+
+@mixin card-picture {
+    border: 3px solid black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+@mixin buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: stretch;
+}
+
+@mixin edit-button {
+    background-color: rgb(119, 230, 119);
+    border: 5px solid black;
+}
+
+@mixin details-button {
+    background-color: skyblue;
+    border: 1px solid black;
+}
+
+@mixin buy-button {
+    background-color: rgba(255, 46, 150, 0.732);
+    border: 1px solid black;
+}
+
+@mixin pageTitle {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 100px 40px 40px 40px;
+}
+
+@mixin dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin modalFooter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin card {
+    border-radius: 35px;
+    border: 10px solid white;
+    border-style: outset;
+    .card-body {
+        @include card-body;
+    }
+    .card-picture {
+        @include card-picture;
+    }
+    .buttons {
+        @include buttons
+    }
+    .edit {
+        @include edit-button;
+    }
+    .details {
+        @include details-button;
+    }
+    .buy {
+        @include buy-button;
+    }
+}
+
+@mixin modal {
+    background: linear-gradient(rgb(34, 90, 223) 0%, rgb(141, 25, 191) 60%, rgb(0, 0, 0) 100%);
+    border: 5px solid white;
+    border-radius: 35px;
+    .modal-footer {
+        @include modalFooter;
+    }
+}
+
+@mixin homeLink {
+    font-size: 30px;
+    margin-left: 50px;
+}
