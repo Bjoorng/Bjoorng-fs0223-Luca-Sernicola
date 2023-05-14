@@ -60,8 +60,8 @@ const getProducts = function () {
         editLink.addEventListener("click", function () {
           if (authorize == undefined) {
             alert("YOU SHALL NOT PASS!");
-          }
-          {
+            window.location = "home.html";
+          } else {
             pageTitle.innerHTML = "Edit your products HERE!!";
             game.classList.add("d-none");
             cartContainer.classList.add("d-none");
