@@ -55,25 +55,6 @@ const getProducts = function () {
         let editBtn = document.querySelectorAll(".editBtn");
         let editLink = document.querySelector(".edit");
 
-        //decommentare per controllare se l'if funziona (funziona giuro);
-        //authorize = null;
-        editLink.addEventListener("click", function () {
-          if (authorize == undefined) {
-            alert("YOU SHALL NOT PASS!");
-            window.location = "home.html";
-          } else {
-            pageTitle.innerHTML = "Edit your products HERE!!";
-            game.classList.add("d-none");
-            cartContainer.classList.add("d-none");
-            editBtn.forEach((button) => {
-              button.classList.remove("d-none");
-              button.classList.add("d-block");
-            });
-            buyButton.forEach((button) => {
-              button.classList.add("d-none");
-            });
-          }
-        });
         let cart = document.querySelector("#cart");
         let total = document.querySelector("#total");
 
@@ -115,6 +96,25 @@ const getProducts = function () {
               });
             });
           });
+        });
+        //decommentare per controllare se l'if funziona (funziona giuro);
+        //authorize = null;
+        editLink.addEventListener("click", function () {
+          if (authorize == undefined) {
+            alert("YOU SHALL NOT PASS!");
+            window.location = "home.html";
+          } else {
+            pageTitle.innerHTML = "Edit your products HERE!!";
+            game.classList.add("d-none");
+            cartContainer.classList.add("d-none");
+            editBtn.forEach((button) => {
+              button.classList.remove("d-none");
+              button.classList.add("d-block");
+            });
+            buyButton.forEach((button) => {
+              button.classList.add("d-none");
+            });
+          }
         });
       });
       console.log(totalPrice);
