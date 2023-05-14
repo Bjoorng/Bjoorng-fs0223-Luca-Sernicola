@@ -1,10 +1,11 @@
 const totalPrice = [];
+let authorize =
+  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZmUzZDg4Zjc0MDAwMTQyODc0NWYiLCJpYXQiOjE2ODM4ODE1MzMsImV4cCI6MTY4NTA5MTEzM30.9RRjliXe7i-4JP13GY4bBmZjJh2HeCv51wbCEXipgYo";
 
 const getProducts = function () {
   fetch("https://striveschool-api.herokuapp.com/api/product/", {
     headers: {
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZmUzZDg4Zjc0MDAwMTQyODc0NWYiLCJpYXQiOjE2ODM4ODE1MzMsImV4cCI6MTY4NTA5MTEzM30.9RRjliXe7i-4JP13GY4bBmZjJh2HeCv51wbCEXipgYo",
+      Authorization: authorize,
     },
   })
     .then((res) => {
@@ -19,7 +20,7 @@ const getProducts = function () {
       console.log("PRODUCTS IN DB", data);
       data.forEach((product) => {
         let colTemplate = document.createElement("div");
-        colTemplate.classList.add("col", "col-md-3", "p-1", "whole-card");
+        colTemplate.classList.add("col", "whole-card");
         colTemplate.innerHTML = `
               <div class="card second-cont">
               <img class="card-picture" src="${product.imageUrl}" alt"${product.alt}">
@@ -35,9 +36,9 @@ const getProducts = function () {
                   <p>${product.price}$</p>
                   </div>
                   <div class="buttons">
-                  <a href="./backoffice.html?productId=${product._id}" class="btn edit p-2 mx-1">Edit</a>
-                  <a href="./findmore.html?productId=${product._id}" class="btn details p-2 mx-1">Details</a>
-                  <a href="#" class="btn buy p-2 mx-1">Buy</a>
+                  <a href="./backoffice.html?productId=${product._id}" class="btn editBtn d-none">Edit</a>
+                  <a href="./findmore.html?productId=${product._id}" class="btn details">Details</a>
+                  <a href="#" class="btn buy">Buy</a>
                   </div>
                 </div>
               </div>
@@ -47,19 +48,45 @@ const getProducts = function () {
         let rowReference = document.getElementById("products-container");
         rowReference.appendChild(colTemplate);
 
+        let pageTitle = document.querySelector(".title");
+        let game = document.querySelector(".game");
+        let cartContainer = document.querySelector("#cart-container");
+        let buyButton = colTemplate.querySelectorAll(".buy");
+        let editBtn = document.querySelectorAll(".editBtn");
+        let editLink = document.querySelector(".edit");
+
+        //decommentare per controllare se l'if funziona (funziona giuro);
+        //authorize = null;
+        editLink.addEventListener("click", function () {
+          if (authorize == undefined) {
+            alert("YOU SHALL NOT PASS!");
+          }
+          {
+            pageTitle.innerHTML = "Edit your products HERE!!";
+            game.classList.add("d-none");
+            cartContainer.classList.add("d-none");
+            editBtn.forEach((button) => {
+              button.classList.remove("d-none");
+              button.classList.add("d-block");
+            });
+            buyButton.forEach((button) => {
+              button.classList.add("d-none");
+            });
+          }
+        });
         let cart = document.querySelector("#cart");
         let total = document.querySelector("#total");
 
-        let buyButton = colTemplate.querySelectorAll(".buy");
         buyButton.forEach((button) => {
           button.addEventListener("click", function (e) {
             e.preventDefault();
             let item = this.closest(".whole-card");
             let listItem = document.createElement("li");
+            listItem.classList.add("list-item");
             listItem.innerHTML = `
           <li class="dropdown-item">
-          <p class="name">${product.name}</p>
-          <p class="price">${product.price}$</p>
+          <p class="name mb-0">${product.name}</p>
+          <p class="price mb-0">${product.price}$</p>
           <button class="btn btn-danger outOfCart">Remove</button>
           </li>
           `;

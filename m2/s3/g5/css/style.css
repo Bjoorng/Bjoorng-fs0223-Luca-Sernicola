@@ -3,14 +3,24 @@
   align-items: end;
   min-height: 100px;
   width: 100%;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
   background-color: black;
   border-bottom: 3px solid rgb(255, 255, 255);
 }
 .navbar .first-child {
   margin-left: 30px;
+}
+
+.home-nav {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
 }
 
 a {
@@ -35,9 +45,10 @@ a {
 
 body {
   background: linear-gradient(rgb(34, 90, 223) 0%, rgb(141, 25, 191) 60%, rgb(0, 0, 0) 100%);
-  font-family: "Press Start 2P", cursive;
-  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+  font-family: "Press Start 2P", cursive;
 }
 
 .title {
@@ -57,6 +68,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.whole-card {
+  padding: 50px;
 }
 
 .card {
@@ -80,23 +95,34 @@ body {
   border-top-right-radius: 25px;
 }
 .card .buttons {
-  width: 100%;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   align-items: stretch;
 }
-.card .edit {
+.card .editBtn {
+  width: 100%;
   background-color: rgb(119, 230, 119);
   border: 5px solid black;
 }
 .card .details {
+  width: 100%;
   background-color: skyblue;
   border: 1px solid black;
 }
 .card .buy {
+  width: 100%;
   background-color: rgba(255, 46, 150, 0.732);
   border: 1px solid black;
+}
+
+.list-item {
+  margin: 10px 0 10px 0;
+}
+.list-item .dropdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .modal-all {
@@ -112,4 +138,34 @@ body {
 .home-link {
   font-size: 30px;
   margin-left: 50px;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  margin: 0 20px 0 100px;
+}
+
+.details-title {
+  margin-top: 50px;
+}
+
+.carousel-cont {
+  margin: 0 auto auto;
+  padding: 20px;
+}
+
+.card-picture {
+  width: 100%;
+}
+
+.details-foot {
+  width: 100%;
+}
+
+.info {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

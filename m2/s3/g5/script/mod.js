@@ -55,6 +55,10 @@ if (productId) {
       document.querySelector("#brand").value = product.brand;
       document.querySelector("#price").value = product.price;
       document.querySelector("#imageUrl").value = product.imageUrl;
+      document.querySelector("#more-text").value = product.moreText;
+      document.querySelector("#imageUrl2").value = product.imageUrl2;
+      document.querySelector("#imageUrl3").value = product.imageUrl3;
+      document.querySelector("#imageUrl4").value = product.imageUrl4;
     })
     .catch((error) => {
       console.log(error);
@@ -80,6 +84,7 @@ productForm.addEventListener("submit", function (e) {
     price: priceInput.value,
     imageUrl: imageUrlInput.value,
   };
+
   console.log("Product Ready", newProduct);
 
   fetch(productId ? PRODUCT_URL + "/" + productId : PRODUCT_URL, {

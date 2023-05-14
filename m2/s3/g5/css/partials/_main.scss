@@ -14,6 +14,14 @@ body {
     @include dropdown;
 }
 
+.whole-card {
+    padding: 50px;
+}
+
 .card {
     @include card;
+}
+
+.list-item {
+    @include listItem;
 }
