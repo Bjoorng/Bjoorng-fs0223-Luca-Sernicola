@@ -4,6 +4,7 @@ let triangle = document.querySelector(".triangle");
 let triangleSecond = document.querySelector(".triangle-second");
 let double = document.querySelector(".double");
 let play = document.querySelector(".play");
+let decide = document.querySelector(".wait-title");
 
 waitSection.addEventListener("click", function () {
   if (square.classList != "jump") {
@@ -40,6 +41,7 @@ let collision = setInterval(function () {
 }, 10);
 
 play.addEventListener("click", function () {
+  decide.innerHTML = "Good luck friend!";
   square.classList.add("jump");
   play.classList.add("hide");
   triangle.classList.add("slider");

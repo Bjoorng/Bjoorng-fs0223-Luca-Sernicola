@@ -113,6 +113,7 @@ body {
 .card .buy {
   width: 100%;
   background-color: rgba(255, 46, 150, 0.732);
+  color: white;
   border: 1px solid black;
 }
 
