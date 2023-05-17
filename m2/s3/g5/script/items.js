@@ -72,6 +72,7 @@ const getProducts = function () {
           </li>
           `;
             totalPrice.push(product.price);
+            localStorage.setItem("totalPrice", JSON.stringify(totalPrice));
             total.textContent =
               "Your Total is:" + totalPrice.reduce(getSum, 0) + "$";
 
@@ -90,6 +91,10 @@ const getProducts = function () {
                 let removedIndex = totalPrice.indexOf(removedPrice);
                 if (removedIndex !== -1) {
                   totalPrice.splice(removedIndex, 1);
+                  localStorage.setItem(
+                    "totalPrice",
+                    JSON.stringify(totalPrice)
+                  );
                 }
                 total.textContent =
                   "Your Total is:" + totalPrice.reduce(getSum, 0) + "$";
