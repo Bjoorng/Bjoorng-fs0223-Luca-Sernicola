@@ -12,7 +12,7 @@ export class ActivePostsComponent {
   constructor(private postSvc: PostsService){
 
     postSvc.getActivePosts()
-    .then(posts => this.posts = posts);
+    .then(posts => {this.posts = posts.filter(p => p.active)});
 
   }
 }
