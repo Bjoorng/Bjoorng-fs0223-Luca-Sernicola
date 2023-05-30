@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let newPost of posts; let i = index">
+<table class="table">
+    <tr *ngIf="!newPost.active">
+      <th>#</th>
+      <th>title</th>
+      <th>body</th>
+      <th>description</th>
+    </tr>
+    <tr *ngIf="!newPost.active">
+      <td>{{i+1}}</td>
+      <td>{{newPost.title}}</td>
+      <td>{{newPost.body}}</td>
+      <td>{{newPost.description}}</td>
+    </tr>
+  
+  </table>
+</div>
