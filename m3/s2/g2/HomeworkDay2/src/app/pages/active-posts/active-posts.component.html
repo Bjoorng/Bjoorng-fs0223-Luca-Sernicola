@@ -1,18 +1,13 @@
-<table *ngFor="let newPost of posts; let i = index" class="table">
-    <tr *ngIf="newPost.active">
-      <th>#</th>
-      <th>name</th>
-      <th>usernames</th>
-      <th>description</th>
-    </tr>
-  
-    <tr *ngIf="newPost.active">
-      <td>{{i+1}}</td>
-      <td>{{newPost.title}}</td>
-      <td>{{newPost.body}}</td>
-      <td>{{newPost.description}}</td>
-  </tr>
-  
-  </table>
+<div class="container d-flex" *ngFor="let newPost of posts; let i = index">
+
+  <div class="card" style="width: 18rem;" *ngIf="newPost.active">
+      <div class="card-body">
+          <p class="card-text">{{i+1}}. </p>
+          <p class="card-text">{{newPost.title}}</p>
+          <p class="card-text">{{newPost.body}}</p>
+          <p class="card-text">{{newPost.description}}</p>
+      </div>
+  </div>
+</div>
   
   
