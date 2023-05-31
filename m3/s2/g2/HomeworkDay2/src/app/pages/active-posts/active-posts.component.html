@@ -1,11 +1,10 @@
 <div class="row d-flex">
   <div class="col" *ngFor="let newPost of posts; let i = index">
-      <div class="card" *ngIf="newPost.active">
+      <div class="card">
           <div class="card-body">
-              <p class="card-text">{{i+1}}.</p>
-              <p>{{newPost.title}}</p>
-              <p>{{newPost.body}}</p>
-              <p>{{newPost.description}}</p>
+              <p class="card-text">{{i+1}}. {{newPost.title}}</p>
+              <p class="card-text">{{newPost.body}}</p>
+              <p class="card-text">{{newPost.description}}</p>
           </div>
       </div>
   </div>
