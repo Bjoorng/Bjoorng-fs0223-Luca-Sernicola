@@ -5,20 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ActivePostsComponent } from './pages/active-posts/active-posts.component';
-import { InactivePostsComponent } from './pages/inactive-posts/inactive-posts.component';
+import { NewsPostsComponent } from './pages/news-posts/news-posts.component';
+import { EducationPostsComponent } from './pages/education-posts/education-posts.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PoliticsComponent } from './pages/politics/politics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ActivePostsComponent,
-    InactivePostsComponent,
-    HomeComponent,
-    PoliticsComponent
+    NewsPostsComponent,
+    EducationPostsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
