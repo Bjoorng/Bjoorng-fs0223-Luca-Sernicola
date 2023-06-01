@@ -11,9 +11,9 @@ export class PoliticsPostsComponent {
 
   constructor(private postSvc: PostsService){
 
-    postSvc.forEach((post) => {
-      this.posts.push(post)
-      })
-
-  }
+    this.postSvc.getPostsArray()
+    let post = this.postSvc.getPostsArray();
+    let filteredPosts = post.filter(post => post.type == 'politics');
+    this.posts = filteredPosts;
+}
 }

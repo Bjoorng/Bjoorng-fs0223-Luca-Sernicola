@@ -11,8 +11,10 @@ export class NewsPostsComponent {
 
   constructor(private postSvc: PostsService){
 
-    postSvc.getActivePosts()
-    .then(posts => {this.posts = posts.filter(p => p.type == 'news')});
+    this.postSvc.getPostsArray()
+    let post = this.postSvc.getPostsArray();
+    let filteredPosts = post.filter(post => post.type == 'news');
+    this.posts = filteredPosts;
 
   }
 }

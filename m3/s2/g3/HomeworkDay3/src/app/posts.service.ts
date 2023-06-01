@@ -8,7 +8,7 @@ export class PostsService {
 
   constructor() { }
 
-  postsArray: Post[] = [
+  private postsArray: Post[] = [
     {
         "id":1,
         "body":"Chi fa cuocere la pasta per il tempo indicato sulla confezione merita la forca.",
@@ -131,7 +131,11 @@ export class PostsService {
     }
 ]
 
-getPostsArray(){
+getPostsArray():Post[] {
   return this.postsArray;
+}
+
+getPostByStatus(status:boolean){
+  return this.postsArray.filter(post => post.active == status);
 }
 }

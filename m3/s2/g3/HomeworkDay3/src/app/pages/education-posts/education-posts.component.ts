@@ -11,9 +11,10 @@ export class EducationPostsComponent {
 
   constructor(private postSvc: PostsService){
 
-    postSvc.getActivePosts()
-    .then(posts => {this.posts = posts.filter(p => p.type == 'politics')});
-
+    this.postSvc.getPostsArray()
+    let post = this.postSvc.getPostsArray();
+    let filteredPosts = post.filter(post => post.type == 'education');
+    this.posts = filteredPosts;
   }
 }
 
