@@ -1,1 +1,14 @@
-<p>completed works!</p>
+<h2>See What You've Already Achieved Here!</h2>
+<div class="container">
+  <div *ngFor="let list of arrList"  class="elementContainer">
+    <div *ngIf="list.completed == true">
+      <div  >
+        <p class="elementId">{{list.id}}</p>
+        <p class="elementTitle">{{list.title}}</p>
+      </div>
+      <div>
+        <button class="edit">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

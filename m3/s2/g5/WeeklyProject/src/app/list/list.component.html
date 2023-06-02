@@ -1,5 +1,20 @@
-<tr>
-  <th>Id</th>
-  <th>Skill</th>
-  <th>Cose solo per un check</th>
-</tr>
+<h2>Here's What You're Looking To Improve On!</h2>
+<form class="add">
+  <input [(ngModel)]="toDoElement.title" [(ngModel)]="innerText" type="text" class="dsc" name="title" placeholder="Learn a new skill!!">
+  <button (click)="create()">+</button>
+</form>
+<div class="container">
+  <div *ngFor="let toDoElement of arrList"  class="elementContainer">
+    <div *ngIf="toDoElement.completed == false">
+      <div  >
+        <p class="elementId">{{toDoElement.id}}</p>
+        <p class="elementTitle">{{toDoElement.title}}</p>
+      </div>
+      <div>
+        <button class="edit">Edit</button>
+        <button (click)="deleteToDo(toDoElement.id)" class="delete">Delete</button>
+        <button (click)="complete(toDoElement)" class="completed">Completed!</button>
+      </div>
+    </div>
+  </div>
+</div>
