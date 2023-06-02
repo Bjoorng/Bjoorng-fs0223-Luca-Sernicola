@@ -1,13 +1,14 @@
 <h2>See What You've Already Achieved Here!</h2>
 <div class="container">
-  <div *ngFor="let list of arrList"  class="elementContainer">
-    <div *ngIf="list.completed == true">
+  <div *ngFor="let toDoElement of arrList"  class="elementContainer">
+    <div *ngIf="toDoElement.completed == true">
       <div  >
-        <p class="elementId">{{list.id}}</p>
-        <p class="elementTitle">{{list.title}}</p>
+        <p class="elementId">{{toDoElement.id}}</p>
+        <p class="elementTitle">{{toDoElement.title}}</p>
       </div>
       <div>
         <button class="edit">Edit</button>
+        <button (click)="deleteToDo(toDoElement.id)" class="delete">Delete</button>
       </div>
     </div>
   </div>

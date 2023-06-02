@@ -4,7 +4,7 @@ import { MyTodo } from './../models/my-todo-model';
 @Injectable({
   providedIn: 'root'
 })
-export class ToDoServiceService {
+export class ToDoService {
 
   apiUrl: string = 'http://localhost:3000/objs'
 

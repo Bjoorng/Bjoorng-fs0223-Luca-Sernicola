@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyTodo} from '../models/my-todo-model'
-import { ToDoServiceService } from '../service/to-do-service.service';
+import { ToDoService } from '../service/to-do-service.service';
 import { ServiceClass } from '../models/service-class';
 
 @Component({
@@ -16,7 +16,7 @@ export class FakeModalComponent implements OnInit {
   arrList:MyTodo[] = [];
   toDoElement:ServiceClass = new ServiceClass('', false);
 
-  constructor(private toDoService:ToDoServiceService) {}
+  constructor(private toDoSVC:ToDoService) {}
 
   ngOnInit(): void {
     this.getToDo();
@@ -28,7 +28,7 @@ export class FakeModalComponent implements OnInit {
   // }
 
   getToDo() {
-    this.toDoService.getToDo().then((res) => {
+    this.toDoSVC.getToDo().then((res) => {
       this.arrList = res;
     });
   }

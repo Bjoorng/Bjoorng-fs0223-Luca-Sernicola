@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MyTodo} from '../models/my-todo-model'
-import { ToDoServiceService } from '../service/to-do-service.service';
+import { ToDoService } from '../service/to-do-service.service';
 
 @Component({
   selector: 'app-completed',
@@ -8,18 +8,18 @@ import { ToDoServiceService } from '../service/to-do-service.service';
   styleUrls: ['./completed.component.scss']
 })
 
-export class CompletedComponent {
+export class CompletedComponent implements OnInit {
 
   arrList:MyTodo[] = [];
 
-  constructor(private toDoService:ToDoServiceService) {}
+  constructor(private toDoSVC:ToDoService) {}
 
     ngOnInit(){
       this.getToDo();
     }
 
-    deleteToDo(id: number) {
-      this.toDoService.deleteToDo(id)
+    deleteToDo(id?: number) {
+      this.toDoSVC.deleteToDo(id)
       .then((res) => {
           console.log('Peccato');
           this.getToDo();
@@ -27,7 +27,7 @@ export class CompletedComponent {
     }
 
     getToDo(){
-      this.toDoService.getToDo().then((res) => {
+      this.toDoSVC.getToDo().then((res) => {
         this.arrList = res;
     });
   }

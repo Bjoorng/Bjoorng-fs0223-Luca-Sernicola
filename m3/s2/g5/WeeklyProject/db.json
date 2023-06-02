@@ -11,13 +11,8 @@
       "id": 2
     },
     {
-      "title": "schivare i giaguari",
-      "completed": true,
-      "id": 5
-    },
-    {
       "title": "Castrare Marmotte",
-      "completed": false,
+      "completed": true,
       "id": 6
     }
   ]

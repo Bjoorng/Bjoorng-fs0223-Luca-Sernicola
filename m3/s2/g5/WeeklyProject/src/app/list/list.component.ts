@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyTodo} from '../models/my-todo-model'
-import { ToDoServiceService } from '../service/to-do-service.service';
+import { ToDoService } from '../service/to-do-service.service';
 import { ServiceClass } from '../models/service-class';
 
 @Component({
@@ -15,14 +15,14 @@ export class ListComponent implements OnInit {
   innerText:string = "";
   toDoElement:ServiceClass = new ServiceClass('', false);
 
-  constructor(private toDoService:ToDoServiceService) {}
+  constructor(private toDoSVC:ToDoService) {}
 
     ngOnInit(){
       this.getToDo();
     }
 
     deleteToDo(id?: number) {
-      this.toDoService.deleteToDo(id)
+      this.toDoSVC.deleteToDo(id)
       .then((res) => {
           console.log('Peccato');
           this.getToDo();
@@ -30,7 +30,7 @@ export class ListComponent implements OnInit {
     }
 
     create(){
-      this.toDoService.addToList(this.toDoElement)
+      this.toDoSVC.addToList(this.toDoElement)
       .then(res => this.getToDo());
       this.innerText = '';
     }
@@ -38,13 +38,13 @@ export class ListComponent implements OnInit {
     complete(element:MyTodo) {
       if(element.completed == false){
       element.completed = true;
-      this.toDoService.updateToDo(element).then((res) => this.getToDo())
+      this.toDoSVC.updateToDo(element).then((res) => this.getToDo())
       };
       console.log(this.toDoElement);
     }
 
     getToDo(){
-      this.toDoService.getToDo().then((res) => {
+      this.toDoSVC.getToDo().then((res) => {
         this.arrList = res;
       });
     }
