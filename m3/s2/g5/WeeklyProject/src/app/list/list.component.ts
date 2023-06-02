@@ -30,9 +30,11 @@ export class ListComponent implements OnInit {
     }
 
     create(){
+      if (this.innerText !== '') {
       this.toDoSVC.addToList(this.toDoElement)
       .then(res => this.getToDo());
       this.innerText = '';
+      }
     }
 
     complete(element:MyTodo) {

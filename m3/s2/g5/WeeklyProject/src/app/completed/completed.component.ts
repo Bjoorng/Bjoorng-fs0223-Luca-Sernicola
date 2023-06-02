@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MyTodo} from '../models/my-todo-model'
 import { ToDoService } from '../service/to-do-service.service';
+import { ServiceClass } from '../models/service-class';
 
 @Component({
   selector: 'app-completed',
@@ -11,6 +12,7 @@ import { ToDoService } from '../service/to-do-service.service';
 export class CompletedComponent implements OnInit {
 
   arrList:MyTodo[] = [];
+  toDoElement:ServiceClass = new ServiceClass('', true);
 
   constructor(private toDoSVC:ToDoService) {}
 
@@ -24,6 +26,14 @@ export class CompletedComponent implements OnInit {
           console.log('Peccato');
           this.getToDo();
         });
+    }
+
+    undo(element:MyTodo) {
+      if(element.completed == true){
+      element.completed = false;
+      this.toDoSVC.updateToDo(element).then((res) => this.getToDo())
+      };
+      console.log(this.toDoElement);
     }
 
     getToDo(){
