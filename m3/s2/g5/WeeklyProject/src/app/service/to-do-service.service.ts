@@ -4,6 +4,7 @@ import { MyTodo } from './../models/my-todo-model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ToDoService {
 
   apiUrl: string = 'http://localhost:3000/objs'
@@ -24,6 +25,10 @@ export class ToDoService {
           },
         body: JSON.stringify(element)
       }).then(response => response.json());
+    }
+
+    getSingleToDo(id:number):Promise<MyTodo>{
+      return fetch(this.apiUrl+'/'+id).then(response => response.json());
     }
 
     updateToDo(element:MyTodo):Promise<MyTodo>{

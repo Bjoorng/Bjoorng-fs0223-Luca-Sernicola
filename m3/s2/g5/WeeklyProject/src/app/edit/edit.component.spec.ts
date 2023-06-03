@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FakeModalComponent } from './fake-modal.component';
+import { EditComponent } from './edit.component';
 
-describe('FakeModalComponent', () => {
-  let component: FakeModalComponent;
-  let fixture: ComponentFixture<FakeModalComponent>;
+describe('EditComponent', () => {
+  let component: EditComponent;
+  let fixture: ComponentFixture<EditComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FakeModalComponent]
+      declarations: [EditComponent]
     });
-    fixture = TestBed.createComponent(FakeModalComponent);
+    fixture = TestBed.createComponent(EditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

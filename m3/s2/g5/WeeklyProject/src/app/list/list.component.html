@@ -6,13 +6,13 @@
 <div class="container">
   <div *ngFor="let toDoElement of arrList"  class="elementContainer">
     <div *ngIf="toDoElement.completed == false">
-      <div  >
+      <div>
         <p class="elementId">{{toDoElement.id}}</p>
         <p class="elementTitle">{{toDoElement.title}}</p>
       </div>
       <div>
-        <button class="edit">Edit</button>
-        <button (click)="deleteToDo(toDoElement.id)" class="delete">Delete</button>
+        <button><a [routerLink]="['edit',toDoElement.id]" class="edit">Edit</a></button>
+        <button (click)="delete(toDoElement.id)" class="delete">Delete</button>
         <button (click)="complete(toDoElement)" class="completed">Completed!</button>
       </div>
     </div>

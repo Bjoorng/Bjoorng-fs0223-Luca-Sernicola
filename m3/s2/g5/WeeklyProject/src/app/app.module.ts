@@ -10,7 +10,7 @@ import { CompletedComponent } from './completed/completed.component';
 import { NavComponent } from './nav/nav.component';
 import { FootComponent } from './foot/foot.component';
 import { MainComponent } from './main/main.component';
-import { FakeModalComponent } from './fake-modal/fake-modal.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import { FakeModalComponent } from './fake-modal/fake-modal.component';
     NavComponent,
     FootComponent,
     MainComponent,
-    FakeModalComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

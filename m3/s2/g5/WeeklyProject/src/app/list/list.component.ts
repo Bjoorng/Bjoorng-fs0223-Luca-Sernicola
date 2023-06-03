@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MyTodo} from '../models/my-todo-model'
 import { ToDoService } from '../service/to-do-service.service';
 import { ServiceClass } from '../models/service-class';
@@ -15,22 +16,25 @@ export class ListComponent implements OnInit {
   innerText:string = "";
   toDoElement:ServiceClass = new ServiceClass('', false);
 
-  constructor(private toDoSVC:ToDoService) {}
+  constructor(
+    private toDoSVC:ToDoService,
+    private router:Router
+    ) {}
 
     ngOnInit(){
       this.getToDo();
     }
 
-    deleteToDo(id?: number) {
+    delete(id?: number) {
       this.toDoSVC.deleteToDo(id)
       .then((res) => {
           console.log('Peccato');
           this.getToDo();
-        });
+      });
     }
 
     create(){
-      if (this.innerText !== '') {
+      if (this.innerText != '') {
       this.toDoSVC.addToList(this.toDoElement)
       .then(res => this.getToDo());
       this.innerText = '';

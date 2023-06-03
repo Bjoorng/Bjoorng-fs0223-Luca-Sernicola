@@ -1,0 +1,14 @@
+.elementContainer {
+  display: flex;
+}
+.textContainer {
+  display: flex;
+  font-weight: 600;
+  .elementId {
+    margin-right: 10px;
+  }
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
