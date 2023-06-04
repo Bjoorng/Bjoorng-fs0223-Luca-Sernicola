@@ -16,7 +16,6 @@ export class ListComponent implements OnInit {
   title:string = "";
   loading:boolean = true;
   comprehension:number = 0;
-  deletedElements:MyTodo[] = [];
   toDoElement:ServiceClass = new ServiceClass('', false);
 
   constructor(
@@ -32,10 +31,8 @@ export class ListComponent implements OnInit {
       this.toDoSVC.deleteToDo(id)
       .then((res) => {
           console.log('What a shame');
-          this.deletedElements.push(this.toDoElement);
           this.getToDo();
       });
-      console.log(this.deletedElements);
     }
 
     create(){
