@@ -1,5 +1,6 @@
 export interface MyTodo {
   id?: number,
   title: string,
-  completed: boolean
+  completed: boolean,
+  comprehension?: number
 }

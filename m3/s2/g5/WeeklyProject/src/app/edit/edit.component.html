@@ -1,5 +1,13 @@
-<h2>Edit your Skills here!</h2>
-<form>
-  <input [(ngModel)]="toDoElement.title" type="text" placeholder="Edit this skill..." name="title">
-  <button (click)="update()">Edit!</button>
-</form>
+<div class="container">
+  <h2>Edit your Skills here!</h2>
+  <form>
+    <div class="inputs">
+      <input [(ngModel)]="toDoElement.title" type="text" name="title" placeholder="Edit this skill..." >
+      <input [(ngModel)]="toDoElement.comprehension" type="number" min="0" max="10" class="dsc" name="level" placeholder="Learn a new skill!!">
+    </div>
+    <div class="editButtons">
+      <button class="edit" (click)="update(toDoElement)">Edit!</button>
+      <button class="back" (click)="backToList()">Back</button>
+    </div>
+  </form>
+</div>

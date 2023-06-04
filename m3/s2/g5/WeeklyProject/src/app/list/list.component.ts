@@ -13,7 +13,10 @@ import { ServiceClass } from '../models/service-class';
 export class ListComponent implements OnInit {
 
   arrList:MyTodo[] = [];
-  innerText:string = "";
+  title:string = "";
+  loading:boolean = true;
+  comprehension:number = 0;
+  deletedElements:MyTodo[] = [];
   toDoElement:ServiceClass = new ServiceClass('', false);
 
   constructor(
@@ -28,30 +31,51 @@ export class ListComponent implements OnInit {
     delete(id?: number) {
       this.toDoSVC.deleteToDo(id)
       .then((res) => {
-          console.log('Peccato');
+          console.log('What a shame');
+          this.deletedElements.push(this.toDoElement);
           this.getToDo();
       });
+      console.log(this.deletedElements);
     }
 
     create(){
-      if (this.innerText != '') {
-      this.toDoSVC.addToList(this.toDoElement)
-      .then(res => this.getToDo());
-      this.innerText = '';
+      if (this.title != ''){
+        if(this.comprehension < 10) {
+          this.toDoSVC.addToList(this.toDoElement)
+          .then(res => this.getToDo());
+          this.title = '';
+          this.comprehension = 0;
+        }else if(this.comprehension == 10){
+          this.toDoElement.completed = true;
+          this.toDoSVC.addToList(this.toDoElement)
+          .then(res => {
+            this.router.navigate(['/completed'],
+            { queryParams: { newElement: JSON.stringify(this.toDoElement) } })
+          });
+        }
+      }{
+        this.title = '';
+        this.comprehension = 0;
       }
     }
 
     complete(element:MyTodo) {
       if(element.completed == false){
+      element.comprehension = 10;
       element.completed = true;
       this.toDoSVC.updateToDo(element).then((res) => this.getToDo())
       };
       console.log(this.toDoElement);
     }
 
+    toEdit(id?:number) {
+      this.router.navigateByUrl(`list/edit/${id}`);
+    }
+
     getToDo(){
       this.toDoSVC.getToDo().then((res) => {
-        this.arrList = res;
+        this.arrList = res.filter(item => item.completed == false);
+      this.loading = false;
       });
     }
 }

@@ -1,14 +1,62 @@
-.elementContainer {
-  display: flex;
-}
-.textContainer {
-  display: flex;
-  font-weight: 600;
-  .elementId {
-    margin-right: 10px;
-  }
-}
-.buttons {
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;1,200&display=swap');
+
+.allComp{
   display: flex;
   flex-direction: column;
+  align-items: center;
+  font-family: 'Exo 2', sans-serif;
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .elementContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 0.2em;
+    }
+    .card{
+      width: 300px;
+      border: 5px inset black;
+      border-radius: 20px;
+      padding: 10px;
+      background: linear-gradient(300deg, rgba(2,0,36,1) 0%, rgba(9,81,121,1) 19%, rgba(0,212,255,1) 95%);
+    }
+    .pContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+    }
+    .idTitle{
+      display: flex;
+    }
+    p {
+      font-size: 1.3em;
+      margin-right: 10px;
+    }
+    .buttons{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+      .undo{
+        border-radius: 10px;
+        background-color: white;
+      }
+      .delete{
+        border-radius: 10px;
+        color: white;
+        background-color: red;
+      }
+      svg {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
+
