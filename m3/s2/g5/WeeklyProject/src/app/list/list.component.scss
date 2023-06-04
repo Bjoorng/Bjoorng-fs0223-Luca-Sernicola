@@ -7,6 +7,9 @@
   font-family: 'Exo 2', sans-serif;
   .add{
     margin-bottom: 30px;
+    .addSkill{
+      cursor: pointer;
+    }
   }
   .container{
     display: flex;
@@ -48,15 +51,18 @@
       .edit{
         border-radius: 10px;
         background-color: lightblue;
+        cursor: pointer;
       }
       .completed{
         border-radius: 10px;
         background-color: lime;
+        cursor: pointer;
       }
       .delete{
         border-radius: 10px;
         color: white;
         background-color: red;
+        cursor: pointer;
       }
       svg {
         height: 30px;

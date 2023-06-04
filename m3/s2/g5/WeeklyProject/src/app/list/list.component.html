@@ -6,7 +6,7 @@
   <input [(ngModel)]="toDoElement.title" [(ngModel)]="title" type="text" class="dsc" name="title" placeholder="Learn a new skill!!">
   <input [(ngModel)]="toDoElement.comprehension" [(ngModel)]="comprehension"
   type="number" class="dsc" min="0" max="10" name="level">
-  <button (click)="create()">+</button>
+  <button class="addSkill" (click)="create()">+</button>
 </form>
 
 <div class="loading" *ngIf="loading">Loading...</div>
