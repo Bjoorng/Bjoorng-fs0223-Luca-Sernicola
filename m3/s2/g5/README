@@ -1,0 +1,7 @@
+Consiglio di testare tutte le funzionalità dei bottoni.
+In to-do c'è il form per aggiungere nuovi elementi (prova anche ad aggiungere un elemento con 10 nell'input numerico)
+ci sono i bottoni edit (stessa cosa dell'input numerico della pagina to-do), complete e delete.
+In completed si può aggiungere una skill già completata e riportarla alla to-do list con il bottone "undo".
+Il valore di "ability" viene automaticamente settato a 10 in caso di elemento completato o aggiunto direttamente alla lista dei completati
+e a 2 quando un elemento viene riportato alla lista dei to-do.
+Grazie per la cortese attezione. Ciao Mike!
