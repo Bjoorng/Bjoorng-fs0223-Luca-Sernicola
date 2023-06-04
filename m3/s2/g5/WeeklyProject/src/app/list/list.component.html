@@ -9,7 +9,9 @@
   <button class="addSkill" (click)="create()">+</button>
 </form>
 
-<div class="loading" *ngIf="loading">Loading...</div>
+<div class="loadBar" *ngIf="loading">
+  <div class="loading" ></div>
+</div>
 
 <div class="container">
     <div *ngFor="let toDoElement of arrList"  class="elementContainer">

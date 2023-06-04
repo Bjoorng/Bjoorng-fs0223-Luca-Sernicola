@@ -4,6 +4,11 @@
     <button class="addSkill" (click)="create()">+</button>
   </form>
   <h2>See What You've Already Achieved Here!</h2>
+
+  <div class="loadBar" *ngIf="loading">
+    <div class="loading" ></div>
+  </div>
+
   <div class="container">
     <div *ngFor="let toDoElement of arrList"  class="elementContainer">
       <div class="card" *ngIf="toDoElement.completed == true">

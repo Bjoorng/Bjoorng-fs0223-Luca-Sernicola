@@ -15,6 +15,7 @@ export class CompletedComponent implements OnInit {
   arrList:MyTodo[] = [];
   toDoElement:ServiceClass = new ServiceClass('', true, 0);
   title:string = "";
+  loading:boolean = true;
   comprehension:number = 0;
 
   constructor(
@@ -56,6 +57,7 @@ export class CompletedComponent implements OnInit {
     getToDo(){
       this.toDoSVC.getToDo().then((res) => {
         this.arrList = res.filter(item => item.completed == true);
+      this.loading = false;
     });
   }
 }
