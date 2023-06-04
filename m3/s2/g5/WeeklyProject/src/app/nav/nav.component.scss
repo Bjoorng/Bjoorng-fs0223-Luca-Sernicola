@@ -28,16 +28,13 @@
     &:hover {
       background-color: skyblue;
       color: white;
-      border: 10px double black;
-      outline: 4px solid white;
-      outline-offset: -7px;
+      border: 5px double black;
+      outline: 2px solid white;
+      outline-offset: -3px;
     }
   }
   .homeLi {
     font-size: 40px;
     padding: 10px 30px;
-    &:hover{
-      font-size: 44px;
-    }
   }
 }
