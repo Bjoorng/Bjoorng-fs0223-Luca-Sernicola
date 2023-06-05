@@ -41,7 +41,7 @@ export class ToDoService {
       }).then(response => response.json());
     }
 
-    deleteToDo(id: number = 0):Promise<MyTodo> {
+    deleteToDo(id:number=0):Promise<MyTodo> {
       return fetch(this.apiUrl + '/' + id, {
         method: 'delete'
       }).then(response => response.json());
