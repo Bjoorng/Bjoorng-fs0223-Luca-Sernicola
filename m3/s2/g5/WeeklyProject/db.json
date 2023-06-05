@@ -1,13 +1,13 @@
 {
   "objs": [
     {
-      "title": "Learn to code in Javascript",
+      "title": "Learn Angular",
       "completed": false,
       "comprehension": 2,
       "id": 2
     },
     {
-      "title": "Learnn Tailwind",
+      "title": "Learn Tailwind",
       "completed": false,
       "comprehension": 2,
       "id": 3
