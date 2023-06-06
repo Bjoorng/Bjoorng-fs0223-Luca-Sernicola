@@ -13,6 +13,13 @@ export class UserInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    return next.handle(request);
+
+    const newRequest = request.clone({
+      headers: request.headers
+      .append('Authorization', 'secretId')
+      .append('firma','xyz')
+    })
+
+    return next.handle(newRequest);
   }
 }

@@ -1,13 +1,6 @@
-import { Component } from '@angular/core';
-import { IAlbum } from '../album';
+import { IAlbum } from "./album";
 
-@Component({
-  selector: 'app-user-class',
-  templateUrl: './user-class.component.html',
-  styleUrls: ['./user-class.component.scss']
-})
-
-export class UserClassComponent implements IAlbum {
+export class AlbumClass implements IAlbum {
 
   albumId:number;
   id:number;
@@ -20,9 +13,8 @@ export class UserClassComponent implements IAlbum {
     id:number,
     title:string,
     url:string,
-    thumbnailUrl:string
-    )
-    {
+    thumbnailUrl:string,
+  ) {
 
     this.albumId = albumId;
     this.id = id;
