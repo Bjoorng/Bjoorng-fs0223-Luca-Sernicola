@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Create Your new favourite hero HERE!!</h1>
+  <form class="form-group" (ngSubmit)="submit(f)" #f="ngForm">
+    <input ngModel class="form-control" #username="ngModel"
+    type="text" name="name" placeholder="Name" required>
+    <span *ngIf="username.invalid && username.touched">
+      What's your hero's name?
+    </span>
+    <input ngModel type="text" name="" id=""
+    placeholder="Alter Ego">
+    <input ngModel type="text" name="" id=""
+    placeholder="Power">
+    <input ngModel type="text" name="" id=""
+    placeholder="Enemy">
+    <input ngModel type="text" name="" id=""
+    placeholder="Planet">
+    <input ngModel type="text" name="" id=""
+    placeholder="Weakness">
+    <div class="checkDiv">
+      <label for="consent">Are You sure this is your hero?</label>
+      <input type="checkbox" id="consent">
+    </div>
+    <button [disabled]="f.invalid">Submit!</button>
+  </form>
+  <div class="card" style="width: 18rem;">
+    <div class="card-header">
+      This is what you just created
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+      <li class="list-group-item"></li>
+    </ul>
+  </div>
+</div>

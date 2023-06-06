@@ -46,7 +46,7 @@ export class CompletedComponent implements OnInit {
     }
 
     undo(element:MyTodo) {
-      if(element.completed == true){
+      if(element.completed){
       element.completed = false;
       element.comprehension = 2;
       this.toDoSVC.updateToDo(element).then((res) => this.getToDo())
@@ -56,7 +56,7 @@ export class CompletedComponent implements OnInit {
 
     getToDo(){
       this.toDoSVC.getToDo().then((res) => {
-        this.arrList = res.filter(item => item.completed == true);
+        this.arrList = res.filter(item => item.completed);
       this.loading = false;
     });
   }

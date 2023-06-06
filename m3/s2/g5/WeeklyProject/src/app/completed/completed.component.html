@@ -11,7 +11,7 @@
 
   <div class="container">
     <div *ngFor="let toDoElement of arrList"  class="elementContainer">
-      <div class="card" *ngIf="toDoElement.completed == true">
+      <div class="card" *ngIf="toDoElement.completed">
         <div class="pContainer" >
           <div class="idTitle">
             <p class="elementId">{{toDoElement.id}}.</p>

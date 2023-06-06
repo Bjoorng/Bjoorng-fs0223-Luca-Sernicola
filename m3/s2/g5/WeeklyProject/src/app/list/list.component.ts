@@ -57,7 +57,7 @@ export class ListComponent implements OnInit {
     }
 
     complete(element:MyTodo) {
-      if(element.completed == false){
+      if(!element.completed){
       element.comprehension = 10;
       element.completed = true;
       this.toDoSVC.updateToDo(element).then((res) => this.getToDo())
@@ -71,7 +71,7 @@ export class ListComponent implements OnInit {
 
     getToDo(){
       this.toDoSVC.getToDo().then((res) => {
-        this.arrList = res.filter(item => item.completed == false);
+        this.arrList = res.filter(item => !item.completed);
       this.loading = false;
       });
     }
