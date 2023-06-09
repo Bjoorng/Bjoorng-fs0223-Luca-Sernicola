@@ -40,8 +40,20 @@ export class AuthService {
     }))
   }
 
+  getUser(){
+    const user = localStorage.getItem('user');
+    const oldUser = JSON.parse('user')
+    if(!user){
+      return
+    }
+    if(this.jwtHelper.isTokenExpired(oldUser.token)){
+      return
+    }
+    this.authSubj.next(oldUser);
+  }
+
   signup(data:SignupData){
-    return this.httpClient.post<AccessData>(this.api + '/register', data)
+    return this.httpClient.post<AccessData>(this.api + '/signup', data);
   }
 
   logOut(){

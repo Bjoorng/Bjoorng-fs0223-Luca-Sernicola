@@ -17,7 +17,7 @@ export class SignupComponent {
     email: '',
     password: '',
     firstName: '',
-    lastName: '',
+    lastName: ''
   };
 
   signUp(){

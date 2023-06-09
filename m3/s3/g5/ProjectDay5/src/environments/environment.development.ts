@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'http://localhost:3000/objs'
+  apiUrl: 'http://localhost:3000/users'
 };
