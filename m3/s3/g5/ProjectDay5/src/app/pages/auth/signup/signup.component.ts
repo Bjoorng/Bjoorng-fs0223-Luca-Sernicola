@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SignupData } from '../interfaces/signup-data';
 import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,8 @@ import { AuthService } from '../auth.service';
 export class SignupComponent {
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ){}
 
   data:SignupData = {
@@ -23,7 +25,7 @@ export class SignupComponent {
   signUp(){
     this.authService.signup(this.data)
     .subscribe(data => {
-      alert(data.user.firstName)
+      this.router.navigate(['auth/login']);
     })
   }
 }

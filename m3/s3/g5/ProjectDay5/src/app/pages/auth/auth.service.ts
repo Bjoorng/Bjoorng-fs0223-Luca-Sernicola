@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { environment } from 'src/environments/environment.development';
 import { AccessData } from './interfaces/access-data';
-import { BehaviorSubject, map, tap } from 'rxjs';
+import { BehaviorSubject, catchError, map, tap, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { SignupData } from './interfaces/signup-data';
@@ -23,29 +23,29 @@ export class AuthService {
   logTimer:any;
 
   constructor(
-    private httpClient: HttpClient,
+    private http: HttpClient,
     private router: Router
   ) { }
 
   login(data:LoginData){
-    return this.httpClient.post<AccessData>(this.api +
+    return this.http.post<AccessData>(this.api +
     '/login', data)
     .pipe(tap(data =>{
       this.authSubj.next(data);
       localStorage.setItem('user', JSON.stringify(data))
 
       const expiration = this.jwtHelper
-      .getTokenExpirationDate(data.token) as
-      Date
-    }))
+      .getTokenExpirationDate(data.token) as Date
+    }),
+    catchError(this.getError))
   }
 
   getUser(){
     const user = localStorage.getItem('user');
-    const oldUser = JSON.parse('user')
     if(!user){
       return
     }
+    const oldUser:AccessData = JSON.parse(user)
     if(this.jwtHelper.isTokenExpired(oldUser.token)){
       return
     }
@@ -53,13 +53,14 @@ export class AuthService {
   }
 
   signup(data:SignupData){
-    return this.httpClient.post<AccessData>(this.api + '/signup', data);
+    return this.http.post<AccessData>(this.api + '/register', data)
+    .pipe(catchError(this.getError));
   }
 
   logOut(){
     this.authSubj.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth/login']);
     if (this.logTimer){
       clearTimeout(this.logTimer);
     }
@@ -70,5 +71,27 @@ export class AuthService {
     this.logTimer = setTimeout(() =>{
       this.logOut();
     }, expired)
+  }
+
+  getError(err:any){
+    switch (err.error){
+      case "Email and Password required":
+        return throwError ('Email and Password are needed');
+        break;
+      case "Email already used":
+        return throwError ('Email already registered');
+        break;
+      case "Invalid email":
+        return throwError ('The email is invalid');
+        break;
+      case "Invalid password":
+        return throwError ('The password is invalid');
+      case "No User":
+        return throwError ('Cannot find the user');
+        break;
+        default:
+      return throwError ('Error');
+        break;
+    }
   }
 }

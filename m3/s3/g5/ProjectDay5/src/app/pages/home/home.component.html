@@ -1,1 +1,19 @@
-<p>Check your posts</p>
+
+<button class="btn btn-danger" (click)="logOut()">Log Out</button>
+
+<p>You're logged in as {{userName}}</p>
+
+<form>
+  <input type="text" class="form-control" name="title" [(ngModel)]="newPost.title">
+  <input type="text" class="form-control" name="body" [(ngModel)]="newPost.body">
+  <button class="btn btn-primary" (click)="anotherOne()">Aggiungi post</button>
+</form>
+
+  <div *ngIf="userLoggedId === newPost.userId">
+    <div *ngFor="let post of posts">
+      <p>{{post.title}}</p>
+      <p>{{post.body}}</p>
+      <button class="btn btn-warning" [routerLink]="['/home','edit',post.id]">Modifica</button>
+      <button class="btn btn-danger" (click)="delete(post.id)">Delete</button>
+    </div>
+  </div>

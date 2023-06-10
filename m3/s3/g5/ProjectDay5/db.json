@@ -1,7 +1,19 @@
 {
-  "users":[
+  "users": [
     {
-
+      "email": "amaromontenegro@gmail.com",
+      "password": "$2a$10$mz3NC9s9025lwsGBMLC3OO.OG5ZfL0P9oL3A9qaFbYaJ9qx6V/4SS",
+      "firstName": "Luca",
+      "lastName": "Sernicola",
+      "id": 1
+    },
+    {
+      "email": "your.email+fakedata95531@gmail.com",
+      "password": "$2a$10$rn2MgoVc/z/fcIpXnjFyFOe.OfmAzCwPZLHhmZcui3.GR19OxWnhe",
+      "firstName": "Russel",
+      "lastName": "Howell",
+      "id": 2
     }
-  ]
+  ],
+  "posts": []
 }
