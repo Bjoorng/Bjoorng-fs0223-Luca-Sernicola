@@ -1,0 +1,19 @@
+<div class="box flex-col items-center rounded-lg overflow-hidden w-[15rem] mx-3">
+  <div class="h-[13rem] w-[10rem]">
+    <img class="object-cover object-top w-full h-full" [src]="product.imageUrl" alt="card image">
+  </div>
+  <div class="p-4 flex-col ">
+    <div>
+    <p class="font-medium text-sm">
+      {{product.title}}
+    </p>
+    <p>
+      {{product.artist}}
+    </p>
+    </div>
+    <div class="mt-2 test-sm">
+      <div>{{product.price}}</div>
+      <div><button class="hover:scale-105 transition-all duration-500 cursor-pointer">add to cart</button></div>
+    </div>
+  </div>
+</div>
