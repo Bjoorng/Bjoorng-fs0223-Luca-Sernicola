@@ -5,6 +5,7 @@ export const vinyls = [
     title: 'Astroworld',
     description:'Double LP folded',
     price: '25,99',
+    genre: 'Rap',
     tracklist: {
       track1: {
         title: 'Stargazing',
@@ -82,6 +83,7 @@ export const vinyls = [
     title: 'Lazaretto',
     description: 'Ultra LP Edition',
     price: '29.90',
+    genre:'Alternative Rock',
     tracklist: {
       track1: {
           'title':'Three Women',

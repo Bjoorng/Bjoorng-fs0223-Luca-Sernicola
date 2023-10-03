@@ -1,0 +1,15 @@
+<div class="product card w-[17] m-3 transition-all cursor-pointer">
+  <div class="h-[20rem]">
+    <img class="h-full w-full" [src]="product.imageUrl" alt="">
+  </div>
+  <div class="textPart p-3 bg-black text-white">
+    <div>
+      <p class="opacity-80">{{product.title}}</p>
+      <p class="opacity-80">{{product.artist}}</p>
+      <p class="opacity-80">{{product.genre}}</p>
+    </div>
+    <div class="flex space-x-2 items-center text-white">
+      <p>{{product.price}}</p>
+    </div>
+  </div>
+</div>
